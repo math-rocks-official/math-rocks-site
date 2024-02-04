@@ -23,6 +23,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <meta name="description" content="MathRocks">
     <meta name="keywords" content="Ciencia y Tecnología">
     <meta name="googlebot" content="index">
@@ -45,6 +46,50 @@
         gtag('js', new Date());
         gtag('config', 'G-C766FEWJ7B');
     </script>
+
+<style>
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.course-banner {
+  width: 100%;
+    max-width: 1200px; /* O cualquier valor máximo que desees */
+    margin: 0 auto;
+    padding: 20px;
+}
+/* Estilos para dispositivos con pantallas pequeñas (móviles) */
+@media screen and (max-width: 768px) {
+    /* Estilos para pantallas pequeñas */
+    body {
+        font-size: 14px;
+    }
+
+    .course-banner {
+        padding: 10px;
+    }
+}
+.course-banner {
+    display: flex;
+    flex-direction: column;
+}
+
+.elemento {
+    flex: 1;
+}
+.course-banner {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+</style>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -210,6 +255,24 @@
     </header>
 </body>
 </html>
+
+<style>
+  .titlesNotPage {
+    line-height: 1.5; /* Ajusta este valor según tus necesidades */
+}
+
+.titlesNotPage {
+    margin-bottom: 20px; /* Ajusta este valor según tus necesidades */
+}
+
+.titlesNotPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh; /* O el valor que desees */
+}
+</style>
 
 <main>
     <section class="hero">
@@ -454,7 +517,11 @@
     position: relative;
     height: 300px; /* Ajusta la altura según tus necesidades */
     overflow: hidden;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas más pequeñas */
+    justify-content: space-around; /* Distribuye los elementos de manera uniforme */
 }
+
 
 .video-section video {
     position: absolute;
@@ -464,7 +531,11 @@
     height: 100%;
     object-fit: cover;
     z-index: -1; /* Coloca el video detrás del contenido */
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas más pequeñas */
+    justify-content: space-around; /* Distribuye los elementos de manera uniforme */
 }
+
 
 /* Agrega estilos adicionales según sea necesario */
 
@@ -523,8 +594,24 @@ body {
             overflow: hidden;
         }
 
+        @media only screen and (max-width: 600px) {
+    /* Estilos para dispositivos móviles */
+    /* Puedes ajustar estilos, tamaños de fuente, etc. */
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Estilos para tabletas */
+}
+
+@media only screen and (min-width: 1025px) {
+    /* Estilos para pantallas más grandes */
+}
+
         .course-banner {
-  width: 300px; /* Ajusta el ancho del cuadro según tus necesidades */
+
+          width: 100%; /* Se expandirá al 100% del contenedor padre */
+    max-width: 400px; /* Máximo ancho para evitar que sea demasiado ancho en pantallas grandes */
+    margin: 0 auto; /* Centra el contenido */
   overflow: hidden;
   border: 1px solid #ccc; /* Añade un borde para resaltar el cuadro */
 }
@@ -1227,7 +1314,7 @@ button:hover {
             <section id="cursos" class="video-section">
                 <video autoplay muted loop>
                     <source src="./Math Rocks - Files/stars2.mp4" type="video/mp4">
-                    Tu navegador no soporta el elemento de video.
+                    Tu navegador no soporta el elemento de video
                 </video>
             
         </body>
