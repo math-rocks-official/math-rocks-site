@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="robots" content="index, follow">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <meta name="description" content="MathRocks">
     <meta name="keywords" content="Ciencia y Tecnología">
     <meta name="googlebot" content="index">
@@ -96,184 +96,160 @@ img {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
         .mainLogo {
             margin-bottom: -5px !important;
         }
+
         .subLogo {
-            margin-bottom: -15px !important;
+            margin-bottom: 150px !important;
         }
 
         .timeText {
             margin-top: 0 !important;
-            padding-top: 10px;
+            padding-top: -20px;
         }
 
-       
-.pl {
-    display: block;
-    width: 9.375em;
-    height: 9.375em;
-}
-
-/* Resto de tu CSS ... */
-
-.pl {
-    display: block;
-    width: 9.375em;
-    height: 9.375em;
-}
-
-/* Resto de tu CSS ... */
-
         .pl {
-  display: block;
-  width: 9.375em;
-  height: 9.375em;
-}
+            display: block;
+            width: 9.375em;
+            height: 9.375em;
+        }
 
-.pl__arrows,
-.pl__ring-rotate,
-.pl__ring-stroke,
-.pl__tick {
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
+        .pl__arrows,
+        .pl__ring-rotate,
+        .pl__ring-stroke,
+        .pl__tick {
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
 
-.pl__arrows {
-  animation-name: arrows42;
-  transform: rotate(45deg);
-  transform-origin: 16px 52px;
-}
+        .pl__arrows {
+            animation-name: arrows42;
+            transform: rotate(45deg);
+            transform-origin: 16px 52px;
+        }
 
-.pl__ring-rotate,
-.pl__ring-stroke {
-  transform-origin: 80px 80px;
-}
+        .pl__ring-rotate,
+        .pl__ring-stroke {
+            transform-origin: 80px 80px;
+        }
 
-.pl__ring-rotate {
-  animation-name: ringRotate42;
-}
+        .pl__ring-rotate {
+            animation-name: ringRotate42;
+        }
 
-.pl__ring-stroke {
-  animation-name: ringStroke42;
-  transform: rotate(-45deg);
-}
+        .pl__ring-stroke {
+            animation-name: ringStroke42;
+            transform: rotate(-45deg);
+        }
 
-.pl__tick {
-  animation-name: tick42;
-}
+        .pl__tick {
+            animation-name: tick42;
+        }
 
-.pl__tick:nth-child(2) {
-  animation-delay: -1.75s;
-}
+        .pl__tick:nth-child(2) {
+            animation-delay: -1.75s;
+        }
 
-.pl__tick:nth-child(3) {
-  animation-delay: -1.5s;
-}
+        .pl__tick:nth-child(3) {
+            animation-delay: -1.5s;
+        }
 
-.pl__tick:nth-child(4) {
-  animation-delay: -1.25s;
-}
+        .pl__tick:nth-child(4) {
+            animation-delay: -1.25s;
+        }
 
-.pl__tick:nth-child(5) {
-  animation-delay: -1s;
-}
+        .pl__tick:nth-child(5) {
+            animation-delay: -1s;
+        }
 
-.pl__tick:nth-child(6) {
-  animation-delay: -0.75s;
-}
+        .pl__tick:nth-child(6) {
+            animation-delay: -0.75s;
+        }
 
-.pl__tick:nth-child(7) {
-  animation-delay: -0.5s;
-}
+        .pl__tick:nth-child(7) {
+            animation-delay: -0.5s;
+        }
 
-.pl__tick:nth-child(8) {
-  animation-delay: -0.25s;
-}
+        .pl__tick:nth-child(8) {
+            animation-delay: -0.25s;
+        }
 
-/* Animations */
-@keyframes arrows42 {
-  from {
-    transform: rotate(45deg);
-  }
+        /* Animations */
+        @keyframes arrows42 {
+            from {
+                transform: rotate(45deg);
+            }
+            to {
+                transform: rotate(405deg);
+            }
+        }
 
-  to {
-    transform: rotate(405deg);
-  }
-}
+        @keyframes ringRotate42 {
+            from {
+                transform: rotate(0);
+            }
+            to {
+                transform: rotate(720deg);
+            }
+        }
 
-@keyframes ringRotate42 {
-  from {
-    transform: rotate(0);
-  }
+        @keyframes ringStroke42 {
+            from,
+            to {
+                stroke-dashoffset: 452;
+                transform: rotate(-45deg);
+            }
+            50% {
+                stroke-dashoffset: 169.5;
+                transform: rotate(-180deg);
+            }
+        }
 
-  to {
-    transform: rotate(720deg);
-  }
-}
+        @keyframes tick42 {
+            from,
+            3%,
+            47%,
+            to {
+                stroke-dashoffset: -12;
+            }
+            14%,
+            36% {
+                stroke-dashoffset: 0;
+            }
+        }
 
-@keyframes ringStroke42 {
-  from,
-	to {
-    stroke-dashoffset: 452;
-    transform: rotate(-45deg);
-  }
-
-  50% {
-    stroke-dashoffset: 169.5;
-    transform: rotate(-180deg);
-  }
-}
-
-@keyframes tick42 {
-  from,
-	3%,
-	47%,
-	to {
-    stroke-dashoffset: -12;
-  }
-
-  14%,
-	36% {
-    stroke-dashoffset: 0;
-  }
-}
+        .titlesNotPage {
+            line-height: 1.5; /* Ajusta este valor según tus necesidades */
+            margin-bottom: 10px; /* Ajusta este valor según tus necesidades */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 50vh; /* O el valor que desees */
+        }
     </style>
 </head>
 <body>
-    <header>
-        <a href="https://mathrocks.net/" class="aLogo">
-            <section class="sectionLogo">
-                <h1 class="mainLogo">MathRocks</h1>
-                <h2 class="subLogo">- Descubre el Poder de la Matemática -</h2>
-            </section>
-        </a>
-        <section class="sectionTime">
-            <h3 class="h3 timeText">1:17:01</h3>
-        </section>
-    </header>
-</body>
-</html>
+  <style>
+    
+  </style>
+  <header>
+      <a href="https://mathrocks.net/" class="aLogo">
+          <section class="sectionLogo">
+              <h1 class="mainLogo">MathRocks</h1>
+              <h2 class="subLogo">- Descubre el Poder de la Matemática -</h2>
+          </section>
+      </a>
 
-<style>
-  .titlesNotPage {
-    line-height: 1.5; /* Ajusta este valor según tus necesidades */
-}
-
-.titlesNotPage {
-    margin-bottom: 20px; /* Ajusta este valor según tus necesidades */
-}
-
-.titlesNotPage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 50vh; /* O el valor que desees */
-}
-</style>
-
+  </header>
+  <main>
 <main>
     <section class="hero">
         <article class="sectionNotPage">
@@ -285,14 +261,98 @@ img {
     text-shadow: 0 0 10px rgba(92, 250, 255, 0.8); /* Ajusta la intensidad del resplandor ajustando el valor 10px */
 }
                 </style>
+                <div class="container">
+                  <div class="icons">
+
+                  </div>
+                  <style>
+                    .time .time-colon .time-text,
+                    .time .time-colon .colon{
+                      font-size: 35px;
+                      font-weight: 600;
+                    }
+                    section.dark .time .time-text .num
+                    section.dark .time .colon{
+                      color: #fff;
+                    }
+
+                    </style>
+                    <script>
+                      setInterval(() => {
+                        let date = new Date(),
+                        hour = date.getHours(),
+                        min = date.getminutes(),
+                        sec = date.getSeconds();
+                      }
+                      </script>
+
+                </div>
                 <h3 class="h3 titleNotPageH3" id="glowingText">Bienvenidos hijos de Gauss al sitio de MathRocks, ¿Helado?</h3>
-                <h4 class="h4 titleNotPageH4">A través de este sitio podrás amar las matemáticas de nuevo</h4>
                 <style>
                   .titleNotPageH4 {
   font-size: 30px; /* Ajusta el tamaño del texto según tus necesidades */
 }
                 </style>
                 <h4 class="h4 titleNotPageH4">𓂀 𝕊𝕀𝕋𝕀𝕆 𝕆𝔽𝕀ℂ𝕀𝔸𝕃 𝔻𝔼𝕃 ℂ𝔸ℕ𝔸𝕃 𝔻𝔼 𝕐𝕆𝕌𝕋𝕌𝔹𝔼 𓂀</h4>
+                <style>
+        body{margin:0;font-family:'Roboto',sans-serif;background-color:#111;color:#fff;transition:background-color 0.5s}
+        #digitalClockContainer{text-align:center;font-size:20px;padding:20px;border-radius:3px;margin:10px;transition:background-color 0.5s,color 0.5s}
+        #dayContainer{font-size:20px;margin-top:10px}
+        body.sun #digitalClockContainer{background-color:#19a8a8;color:#000}
+        body.moon #digitalClockContainer{background-color:#000;color:#19a8a8}
+        #toggleButtons{display:flex;justify-content:space-between;margin-top:20px}
+        .toggleButton{cursor:pointer;border:none;background:none;font-size:24px;color:#19a8a8}
+        .toggleButton:hover{color:#19a8a8}
+    </style>
+</head>
+<body class="sun">
+    <div id="digitalClockContainer"></div>
+    <div id="dayContainer"></div>
+    <div id="toggleButtons">
+        <button class="toggleButton" onclick="toggleMode('sun')">☀️</button>
+        <button class="toggleButton" onclick="toggleMode('moon')">🌙</button>
+    </div>
+    <script>
+        function updateClock() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+
+            // Formatea la hora, minutos y segundos para que tengan siempre dos dígitos
+            hours = hours < 10 ? '0' + hours : hours;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+
+            // Obtiene el día de la semana y la fecha
+            var daysOfWeek = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+            var dayOfWeek = daysOfWeek[now.getDay()];
+            var date = now.getDate();
+            var month = now.getMonth() + 1; // Suma 1 porque los meses comienzan desde 0
+            var year = now.getFullYear();
+
+            // Formatea el mes y la fecha para que tengan siempre dos dígitos
+            month = month < 10 ? '0' + month : month;
+            date = date < 10 ? '0' + date : date;
+
+            // Actualiza el contenido del contenedor del reloj
+            document.getElementById('digitalClockContainer').innerHTML = hours + ':' + minutes + ':' + seconds + '<br>' + dayOfWeek + ', ' + date + '/' + month + '/' + year;
+        }
+
+        // Función para cambiar entre sol y luna
+        function toggleMode(mode) {
+            document.body.classList.remove('sun', 'moon');
+            document.body.classList.add(mode);
+        }
+
+        // Actualiza el reloj cada segundo
+        setInterval(updateClock, 1000);
+
+        // Llama a la función al cargar la página para mostrar la hora inicial
+        updateClock();
+    </script>
+</body>
+                
 
                 <div style="display: flex; justify-content: center; align-items: center; height: 50vh; margin-bottom: 50px;">
                     <svg class="pl" viewBox="0 0 100 220" width="-100px" height="-100px" xmlns="http://www.w3.org/2000/svg">
