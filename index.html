@@ -47,19 +47,30 @@
         gtag('config', 'G-C766FEWJ7B');
     </script>
 
-<style>
+    <style>
+        /* Estilos generales */
 body {
-    font-size: 16px;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-.course-banner {
-  width: 100%;
-    max-width: 1200px; /* O cualquier valor máximo que desees */
-    margin: 0 auto;
-    padding: 20px;
+/* Estilos específicos para diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+    /* Estilos para pantallas pequeñas */
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Estilos para tabletas */
+}
+
+@media (min-width: 1025px) {
+    /* Estilos para pantallas grandes */
+}
+    </style>
+
+<style>
+
 /* Estilos para dispositivos con pantallas pequeñas (móviles) */
 @media screen and (max-width: 768px) {
     /* Estilos para pantallas pequeñas */
@@ -507,7 +518,7 @@ img {
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <title>MathRocks</title>
     <style>
 
@@ -962,7 +973,7 @@ footer {
    
 .course-banner {
     display: inline-block;
-    width: 30px;
+    width: 10px;
     height: 200px;
     background-color: #0871e9;
     text-align: center;
@@ -1031,7 +1042,7 @@ footer {
     <html lang="es">
         <head>
             <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
             <style>
                 body {
                     font-family: 'Arial', sans-serif;
@@ -1066,7 +1077,7 @@ footer {
                 }
         
                 a:hover {
-                    color: #bafc05; /* Cambiar a color deseado al pasar el ratón */
+                    color: #0a0a0a; /* Cambiar a color deseado al pasar el ratón */
                 }
 
                 button,button::after {
@@ -1341,6 +1352,9 @@ button:hover {
   transform: translateY(100%);
   color: #f70b0b;
 }
+
+
+
 
             </style>
 
