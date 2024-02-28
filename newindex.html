@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://mathrocks.net/wp-content/uploads/2020/05/cropped-logo-final-1-32x32.png">
+  <title>Math Rocks Fest II</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden; /* Para evitar barras de desplazamiento horizontal */
+    }
+
+    /* Estilos para el video de fondo */
+    #video-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; /* Para que esté detrás del contenido */
+      object-fit: cover;
+    }
+    </style>
+      <!-- Video de fondo -->
+  <video autoplay muted loop id="video-background">
+    <source src="./Math Rocks - Files/mathfest.mp4" type="video/mp4">
+    Tu navegador no soporta el elemento de video.
+  </video>
+  <style>
+
+  /* Estilos para el contenedor del banner */
+  #banner-container {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Altura ajustable según tus necesidades */
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo semi-transparente */
+    overflow: hidden; /* Para ocultar el desbordamiento de las imágenes */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 2px solid transparent; /* Borde transparente para aplicar el brillo */
+    box-shadow: 0 0 20px 10px rgba(80, 5, 5, 0.5); /* Efecto de brillo (glow) alrededor del borde */
+  }
+
+  /* Estilos para las imágenes dentro del banner */
+  .banner-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    max-width: 100%; /* Máximo ancho del contenedor */
+    max-height: 100%; /* Máxima altura del contenedor */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+
+
+    /* Estilos específicos para la banner-img activa */
+    .banner-img.active {
+      opacity: 1;
+    }
+
+
+  /* Estilos para el botón de desplazamiento */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(80, 5, 5, 0.9); /* Fondo semi-transparente */
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; /* Tamaño del icono */
+    color: white; /* Color del icono */
+  }
+
+  /* Estilos específicos para la flecha izquierda */
+  .arrow.left {
+    left: 20px; /* Ajuste para que esté más a la izquierda */
+  }
+
+  /* Estilos específicos para la flecha derecha */
+  .arrow.right {
+    right: 20px; /* Ajuste para que esté más a la derecha */
+  }
+
+    .arrow:hover {
+      background-color: rgba(80, 5, 5, 0.9); /* Brillo al pasar el ratón */
+    }
+
+        /* Estilos para la sección de pagos */
+
+
+    .payments-card-container {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch; /* Para mejorar la experiencia de desplazamiento en dispositivos móviles */
+      margin-top: -100px;
+    }
+
+    .payments-card {
+      flex: 0 0 auto;
+      width: 350px;
+      background-color: rgba(207, 205, 205, 0.671);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(236, 1, 1, 0.1);
+      margin-right: 20px;
+      scroll-snap-align: start;
+    }
+
+    .payments-card img {
+      width: 100%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .payments-card .card-content {
+      padding: 20px;
+    }
+
+  </style>
+</head>
+<body>
+
+
+
+  <!-- Contenedor del banner deslizable -->
+  <div id="banner-container">
+    <!-- Imágenes del banner -->
+    <div id="banner-images">
+      <img class="banner-img active" src="./Math Rocks - Files/Ponentes/jp.png" alt="Imagen 1">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/jc.png" alt="Imagen 2">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/df.png" alt="Imagen 3">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/dv.png" alt="Imagen 4">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/ab.png" alt="Imagen 5">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/jf.png" alt="Imagen 6">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/rc.png" alt="Imagen 7">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/dd.png" alt="Imagen 8">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/mp.png" alt="Imagen 9">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/fs.png" alt="Imagen 10">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/ma.png" alt="Imagen 11">
+      
+      <!-- Agrega más imágenes según sea necesario -->
+    </div>
+
+    <!-- Flecha izquierda -->
+    <div class="arrow left" onclick="scrollBanner(-1)">&#10094;</div>
+    <!-- Flecha derecha -->
+    <div class="arrow right" onclick="scrollBanner(1)">&#10095;</div>
+  </div>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  
+    #payments-section {
+      text-align: center;
+    }
+  
+    .payments-card-container {
+      display: inline-block;
+    }
+  </style>
+  </head>
+  <body>
+  
+  <section id="payments-section">
+    <h2></h2>
+    <div class="payments-card-container">
+<!-- Tarjetas de pagos -->
+<div class="payments-card" style="box-shadow: 0 0 20px 10px rgba(23, 250, 2, 0.5); /* Efecto de brillo (glow) alrededor del borde */">
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <div style="padding: 20px; box-shadow: 0 0 20px 10px rgba(245, 1, 1, 0.5); /* Efecto de brillo (glow) alrededor de la caja */">
+      <h3 style="text-align: center;">Nombre Completo de quien recoge con una Identificación</h3>
+      <input type="text" name="os0" maxLength="200" style="width: 100%; padding: 10px; font-size: 16px; border-radius: 10px; border: none; background-color: rgba(255, 255, 255, 0.8);" />
+    </div>
+    <input type="hidden" name="cmd" value="_s-xclick" />
+    <input type="hidden" name="hosted_button_id" value="G7Z5KS2H6AYP6" />
+    <input type="hidden" name="currency_code" value="MXN" />
+    <input type="image" src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" title="PayPal es una forma segura y fácil de pagar en línea." alt="Comprar ahora" style="display: block; margin: 0 auto; margin-top: 20px;" />
+  </form>
+</div>
+
+
+
+  <script>
+    // Función para desplazar el banner
+    let currentImageIndex = 0;
+    const images = document.querySelectorAll('.banner-img');
+    const numImages = images.length;
+    let intervalId;
+
+    function scrollBanner(direction) {
+      clearInterval(intervalId); // Limpiar el intervalo para evitar conflictos
+      currentImageIndex = (currentImageIndex + direction + numImages) % numImages;
+      showImage(currentImageIndex);
+    }
+
+    // Función para mostrar la imagen actual
+    function showImage(index) {
+      images.forEach((img, idx) => {
+        if (idx === index) {
+          img.classList.add('active');
+        } else {
+          img.classList.remove('active');
+        }
+      });
+      startAutoScroll(); // Iniciar el desplazamiento automático después de mostrar la imagen
+    }
+
+    // Función para iniciar el desplazamiento automático
+    function startAutoScroll() {
+      intervalId = setInterval(() => {
+        currentImageIndex = (currentImageIndex + 1) % numImages;
+        showImage(currentImageIndex);
+      }, 30000); // Cambia aquí el tiempo de espera entre imágenes en milisegundos (30 segundos)
+    }
+  </script>
+
+</body>
+</html>
