@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./Math Rocks - Files/mainResponsive.css">
   <link rel="icon" href="https://mathrocks.net/wp-content/uploads/2020/05/cropped-logo-final-1-32x32.png">
   <title>Math Rocks Fest II</title>
   <style>
@@ -16,7 +17,7 @@
 
     /* Estilos para el video de fondo */
     #video-background {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
@@ -24,116 +25,98 @@
       z-index: -1; /* Para que esté detrás del contenido */
       object-fit: cover;
     }
-    </style>
-      <!-- Video de fondo -->
-  <video autoplay muted loop id="video-background">
-    <source src="./Math Rocks - Files/mathfest.mp4" type="video/mp4">
-    Tu navegador no soporta el elemento de video.
-  </video>
-  <style>
 
-  /* Estilos para el contenedor del banner */
-  #banner-container {
-    position: relative;
-    width: 100%;
-    height: 500px; /* Altura ajustable según tus necesidades */
-    background-color: rgba(255, 255, 255, 0.5); /* Fondo semi-transparente */
-    overflow: hidden; /* Para ocultar el desbordamiento de las imágenes */
-    border-radius: 10px; /* Bordes redondeados */
-    border: 2px solid transparent; /* Borde transparente para aplicar el brillo */
-    box-shadow: 0 0 20px 10px rgba(80, 5, 5, 0.5); /* Efecto de brillo (glow) alrededor del borde */
-  }
+    /* Estilos para el contenedor del banner */
+    #banner-container {
+      position: relative;
+      width: 100%;
+      height: 500px; /* Altura ajustable según tus necesidades */
+      overflow: hidden; /* Para ocultar el desbordamiento de las imágenes */
+      margin-bottom: 50px; /* Espacio para la sección inferior */
+    }
 
-  /* Estilos para las imágenes dentro del banner */
-  .banner-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: auto;
-    height: auto;
-    max-width: 100%; /* Máximo ancho del contenedor */
-    max-height: 100%; /* Máxima altura del contenedor */
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
-
-
+    /* Estilos para las imágenes dentro del banner */
+    .banner-img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: auto;
+      height: auto;
+      max-width: 100%; /* Máximo ancho del contenedor */
+      max-height: 100%; /* Máxima altura del contenedor */
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
 
     /* Estilos específicos para la banner-img activa */
     .banner-img.active {
       opacity: 1;
     }
 
+    /* Estilos para el botón de desplazamiento */
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      background-color: rgba(80, 5, 5, 0.9); /* Fondo semi-transparente */
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px; /* Tamaño del icono */
+      color: white; /* Color del icono */
+    }
 
-  /* Estilos para el botón de desplazamiento */
-  .arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    background-color: rgba(80, 5, 5, 0.9); /* Fondo semi-transparente */
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px; /* Tamaño del icono */
-    color: white; /* Color del icono */
-  }
+    /* Estilos específicos para la flecha izquierda */
+    .arrow.left {
+      left: 20px; /* Ajuste para que esté más a la izquierda */
+    }
 
-  /* Estilos específicos para la flecha izquierda */
-  .arrow.left {
-    left: 20px; /* Ajuste para que esté más a la izquierda */
-  }
-
-  /* Estilos específicos para la flecha derecha */
-  .arrow.right {
-    right: 20px; /* Ajuste para que esté más a la derecha */
-  }
+    /* Estilos específicos para la flecha derecha */
+    .arrow.right {
+      right: 20px; /* Ajuste para que esté más a la derecha */
+    }
 
     .arrow:hover {
       background-color: rgba(80, 5, 5, 0.9); /* Brillo al pasar el ratón */
     }
 
-        /* Estilos para la sección de pagos */
-
-
-    .payments-card-container {
-      display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch; /* Para mejorar la experiencia de desplazamiento en dispositivos móviles */
-      margin-top: -100px;
+    /* Estilos para la sección inferior */
+    #lower-section {
+      background-color: #f0f0f0;
+      padding: 50px 0;
+      text-align: center;
     }
 
-    .payments-card {
-      flex: 0 0 auto;
-      width: 350px;
-      background-color: rgba(207, 205, 205, 0.671);
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(236, 1, 1, 0.1);
-      margin-right: 20px;
-      scroll-snap-align: start;
+    /* Estilos para el contenido de la sección inferior */
+    #lower-section-content {
+      max-width: 800px;
+      margin: 0 auto;
     }
 
-    .payments-card img {
-      width: 100%;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
+    #lower-section-content img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
     }
-
-    .payments-card .card-content {
-      padding: 20px;
+      /* Estilos para el resplandor del texto */
+      .glowing-text {
+      color: black;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Efecto de resplandor */
     }
-
   </style>
 </head>
 <body>
-
-
+  <!-- Video de fondo -->
+  <video autoplay muted loop id="video-background">
+    <source src="./Math Rocks - Files/mathfest.mp4" type="video/mp4">
+    Tu navegador no soporta el elemento de video.
+  </video>
 
   <!-- Contenedor del banner deslizable -->
   <div id="banner-container">
@@ -150,7 +133,6 @@
       <img class="banner-img" src="./Math Rocks - Files/Ponentes/mp.png" alt="Imagen 9">
       <img class="banner-img" src="./Math Rocks - Files/Ponentes/fs.png" alt="Imagen 10">
       <img class="banner-img" src="./Math Rocks - Files/Ponentes/ma.png" alt="Imagen 11">
-      
       <!-- Agrega más imágenes según sea necesario -->
     </div>
 
@@ -160,46 +142,49 @@
     <div class="arrow right" onclick="scrollBanner(1)">&#10095;</div>
   </div>
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+  <!-- Sección inferior -->
+<section id="lower-section">
+  <div id="lower-section-content">
+    <!-- Aquí puedes agregar tu contenido para la sección inferior -->
+    <h2 style="font-style: italic; color: #333; font-size: 50px;">MATH ROCKS FEST II</h2>
+    <p style="font-style: italic; color: #666; font-size: 35px;">¿Quieres hacer historia con nosotros?</p>
+    <img src="./Math Rocks - Files/festconf.jpg" alt="Tu imagen" style="width: 1000px; height: 1020px; border-radius: 10%;">
+    <p style="font-style: italic; color: #777; line-height: 1.6; font-size: 30px;">Este 8 de junio serás testigo de un emocionante viaje al reino del conocimiento y el descubrimiento como nunca antes lo habías visto. Sé parte del festival de enseñanza y divulgación científica más esperado del año, el MATH ROCKS Fest 2.0; donde la ciencia cobra vida y la curiosidad no conoce límites.<br>¡PREVENTA DE BOLETOS INICIA 1 DE MARZO <a href="#" style="text-decoration: none; color: #007bff;">AQUÍ</a>!</p>
+    <section id="payments-section">
+      <h2 style="font-size: 50px;">PAGOS</h2>
+      <div class="payments-card-container">
+        <!-- Tarjeta de pago con PayPal -->
+        <div class="payments-card">
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <div style="padding: 20px;">
+              <img src="./Math Rocks - Files/paymath.png" alt="Tu imagen" style="width: 500px; height: 502px; border-radius: 10%;">
+              <h3 style="text-align: center; font-size: 30px;">Nombre Completo en el recuadro de quien recoge con una Identificación</h3>
+              <input type="text" name="os0" maxLength="200" style="width: 100%; padding: 10px; font-size: 16px; border-radius: 10px; border: none; background-color: rgba(255, 255, 255, 0.8); box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.5);" />
+            </div>
+            <input type="hidden" name="cmd" value="_s-xclick" />
+            <input type="hidden" name="hosted_button_id" value="G7Z5KS2H6AYP6" />
+            <input type="hidden" name="currency_code" value="MXN" />
+            <input type="image" src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" title="PayPal es una forma segura y fácil de pagar en línea." alt="Comprar ahora" style="display: block; margin: 0 auto; margin-top: 20px; width: 200px; height: auto;" />
+            <h2 style="font-style: italic; color: #333; font-size: 50px;">- PAGO CON TARJETA BANCARIA -</h2>
+            <img src="./Math Rocks - Files/tb.png" alt="Tu imagen" style="width: 500px; height: 502px; border-radius: 10%;">
+            <p style="font-style: italic; color: #777; line-height: 1.6; font-size: 35px;">Interactúa con tus Edutubers y Divulgadores FAVORITOS, habrá firma de AUTÓGRAFOS, toma de FOTOS, LIBROS, REGALOS y muchas SORPRESAS.
+              Podrás disfrutar de un escenario INCREÍBLE con una MEGA PANTALLA de 8 metros para deleitarte con las conferencias. <br> 
+              Ya que pagues envía tu comprobante a las redes del canal de Math Rocks para que el día del evento con una IDENTIFICACIÓN recojas tus boletos en físico y seas parte de esta INCREÍBLE HISTORIA, el costo del Boleto te da acceso a TODO el EVENTO</p></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+
+
+  <!-- Sección de pagos -->
   
-    #payments-section {
-      text-align: center;
-    }
-  
-    .payments-card-container {
-      display: inline-block;
-    }
-  </style>
-  </head>
-  <body>
-  
-  <section id="payments-section">
-    <h2></h2>
-    <div class="payments-card-container">
-<!-- Tarjetas de pagos -->
-<div class="payments-card" style="box-shadow: 0 0 20px 10px rgba(23, 250, 2, 0.5); /* Efecto de brillo (glow) alrededor del borde */">
-  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-    <div style="padding: 20px; box-shadow: 0 0 20px 10px rgba(245, 1, 1, 0.5); /* Efecto de brillo (glow) alrededor de la caja */">
-      <h3 style="text-align: center;">Nombre Completo de quien recoge con una Identificación</h3>
-      <input type="text" name="os0" maxLength="200" style="width: 100%; padding: 10px; font-size: 16px; border-radius: 10px; border: none; background-color: rgba(255, 255, 255, 0.8);" />
+      <!-- Agrega más tarjetas de pago según sea necesario -->
     </div>
-    <input type="hidden" name="cmd" value="_s-xclick" />
-    <input type="hidden" name="hosted_button_id" value="G7Z5KS2H6AYP6" />
-    <input type="hidden" name="currency_code" value="MXN" />
-    <input type="image" src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" title="PayPal es una forma segura y fácil de pagar en línea." alt="Comprar ahora" style="display: block; margin: 0 auto; margin-top: 20px;" />
-  </form>
-</div>
+  </section>
 
-
-
+  <!-- Scripts al final del body -->
   <script>
     // Función para desplazar el banner
     let currentImageIndex = 0;
@@ -233,6 +218,5 @@
       }, 30000); // Cambia aquí el tiempo de espera entre imágenes en milisegundos (30 segundos)
     }
   </script>
-
 </body>
 </html>
