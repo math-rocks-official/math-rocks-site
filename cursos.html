@@ -1,0 +1,918 @@
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>MathRocks</title>
+    <style>
+
+
+
+        /* Estilos adicionales para la sección con fondo de imagen */
+        #cursos h2, #cursos p {
+            margin: 0; /* Elimina los márgenes predeterminados para el encabezado y el párrafo */
+        }
+
+        <section class="sectionOtherOptions">
+        /* Aquí irá el código CSS */
+
+        body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+
+.video-section {
+    position: relative;
+    height: 300px; /* Ajusta la altura según tus necesidades */
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas más pequeñas */
+    justify-content: space-around; /* Distribuye los elementos de manera uniforme */
+}
+
+
+.video-section video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Coloca el video detrás del contenido */
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas más pequeñas */
+    justify-content: space-around; /* Distribuye los elementos de manera uniforme */
+}
+
+
+/* Agrega estilos adicionales según sea necesario */
+
+
+        body{margin:0;box-sizing:border-box}header{position:fixed;width:100%;height:2.5rem;display:flex;justify-content:space-between;padding:1rem 0;background-color:rgba(247, 10, 10, 0.04);box-shadow:0 0 25px rgba(179,179,179,.3);border-radius:0 0 25px 25px;z-index:1000;backdrop-filter:blur(5px);user-select:none;transition:600ms ease}.headerWhite{background-color:rgba(255,255,255,.9);box-shadow:0 0 10px rgba(243, 5, 5, 0.6);transition:600ms ease;backdrop-filter:blur(10px)}.moreBoxShadowDark{box-shadow:0 0 5px rgba(0,0,0,.5)}.moreBoxShadowWhite{box-shadow:0 0 20px rgba(255,255,255,.4)}.sectionLogo,.sectionLogoBlack{display:flex;flex-direction:column;justify-content:center;align-items:center}.aLogo{position:absolute;left:80px;color:#000;text-decoration:none}.sectionLogo{color:#fff}.sectionLogoBlack{color:#000}.mainLogo{font-family:'Lobster',cursive;font-weight:lighter;font-size:22px;margin:0}.subLogo{font-family:'Roboto',sans-serif;font-size:10px;margin:0}.sectionTime{height:2.5rem;position:absolute;display:flex;align-items:center;right:60px}.timeText{color:#fff}@media screen and (max-width:720px){header{backdrop-filter:blur(15px)}.aLogo{left:40px}.mainLogo{font-size:20px}.subLogo{font-size:8px}.sectionTime{right:40px}.timeText{font-size:15px}}
+/* Estilos generales */
+
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #070707;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: rgb(224, 248, 4);
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        section h2 {
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para la sección de cursos */
+        #cursos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500px; /* Ajusta la altura según tus necesidades */
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media only screen and (max-width: 600px) {
+    /* Estilos para dispositivos móviles */
+    /* Puedes ajustar estilos, tamaños de fuente, etc. */
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Estilos para tabletas */
+}
+
+@media only screen and (min-width: 1025px) {
+    /* Estilos para pantallas más grandes */
+}
+
+        .course-banner {
+
+          width: 100%; /* Se expandirá al 100% del contenedor padre */
+    max-width: 400px; /* Máximo ancho para evitar que sea demasiado ancho en pantallas grandes */
+    margin: 0 auto; /* Centra el contenido */
+  overflow: hidden;
+  border: 1px solid #ccc; /* Añade un borde para resaltar el cuadro */
+}
+
+.course-banner a {
+  display: block;
+  text-decoration: none;
+}
+
+.course-banner img {
+  width: 100%; /* Asegura que la imagen se ajuste al ancho del cuadro */
+}
+
+.course-banner h2 {
+  font-size: 16px; /* Ajusta el tamaño de fuente según tus necesidades */
+  letter-spacing: -1px; /* Ajusta el espaciado entre letras según tus necesidades */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 5px 0; /* Añade un poco de espacio alrededor del texto */
+}
+
+        /* Ajustes para la sección de cursos */
+#cursos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Ajustes para el banner de los cursos */
+.course-banner {
+    width: 200px;
+    height: 250px; /* Ajusta la altura según tus necesidades */
+    margin: 10px;
+    text-align: center;
+    background-color: #0871e9;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s;
+}
+
+.course-banner:hover {
+    transform: scale(1.1);
+}
+
+.course-banner a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    height: 100%;
+}
+
+.course-banner img {
+    width: 100%;
+    height: auto;
+}
+
+.course-banner h2 {
+    font-style: italic;
+    font-weight: bold;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s;
+}
+
+.course-banner:hover h2 {
+    opacity: 0.8;
+}
+
+        /* Estilos para el video de fondo */
+        #cursos video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Resto de estilos */
+        h2, p {
+            color: white;
+        }
+
+        footer {
+            background-color: #5e5656;
+            color: rgb(252, 251, 251);
+            text-align: center;
+            padding: 10px;
+        }
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: rgba(99, 236, 218, 0.945);
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+}
+
+/* Estilos para la sección de cursos */
+#cursos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ajustes para la sección de cursos */
+#cursos {
+    display: flex;
+    justify-content: center; /* Centrado horizontalmente */
+    align-items: center; /* Centrado verticalmente */
+    height: 100vh; /* Ajusta según sea necesario para el centrado vertical */
+}
+
+/* Ajustes para el banner de los cursos */
+.course-banner {
+    width: 200px;
+    height: 250px; /* Ajusta la altura según tus necesidades */
+    text-align: center;
+    background-color: #0871e9;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s;
+}
+
+.course-banner:hover {
+    transform: scale(1.1);
+}
+
+.course-banner a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    height: 100%;
+}
+
+.course-banner img {
+    width: 100%;
+    height: auto;
+}
+
+.course-banner h2 {
+    font-style: italic;
+    font-weight: bold;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s;
+}
+
+.course-banner:hover h2 {
+    opacity: 0.8;
+}
+
+/* Ajustes para la sección de cursos */
+#cursos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap; /* Evita que se envuelva en varias líneas */
+    overflow-x: auto; /* Agrega una barra de desplazamiento horizontal si es necesario */
+}
+
+/* Ajustes para el banner de los cursos */
+.course-banner {
+    width: 20px;
+    height: -200px; /* Ajusta la altura según tus necesidades */
+    margin: 10px;
+    text-align: center;
+    background-color: #0871e9;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s;
+}
+
+.course-banner:hover {
+    transform: scale(1.1);
+}
+
+.course-banner a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    height: 100%;
+}
+
+.course-banner img {
+    width: 100%;
+    height: auto;
+}
+
+.course-banner h2 {
+    font-style: italic;
+    font-weight: bold;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 10%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s;
+}
+
+.course-banner:hover h2 {
+    opacity: 0.8;
+}
+
+/* Estilos para el banner de los cursos */
+.course-banner {
+    display: inline-block;
+    width: -20px;
+    height: -20px;
+    background-color: #e90808;
+    text-align: center;
+    line-height: 200px;
+    margin: 150px;
+    border-radius: 100px;
+    transition: transform 0.5s;
+}
+
+.course-banner:hover {
+    transform: scale(1.1);
+}
+
+
+/* Estilos para el banner de los cursos */
+
+.courses-container {
+            display: flex; /* Cambiado de block a flex para permitir múltiples columnas */
+            flex-wrap: wrap; /* Añadido para permitir que los cuadros se envuelvan en varias líneas */
+            max-width: 850px; /* Ajusta según el ancho deseado para evitar que se extienda demasiado */
+            margin: 0 auto; /* Centrar el contenedor */
+        }
+   
+.course-banner {
+    display: inline-block;
+    width: 10px;
+    height: 200px;
+    background-color: #0871e9;
+    text-align: center;
+    margin: 100px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden; /* Añadido para evitar que las letras se salgan del contenedor */
+}
+
+.course-banner a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    height: 350%;
+}
+
+.course-banner img {
+    vertical-align: middle;
+    max-width: 60%;
+    max-height: 200%;
+}
+
+.course-banner a h2 {
+    font-style: italic;
+    font-weight: bold;
+    margin: 0;
+    position: absolute;
+    top: 75%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    transform: translateX(100%)
+    transition: opacity 0.5s; /* Añadido para una transición de opacidad */
+}
+
+.course-banner:hover a h2 {
+    opacity: 2; /* Añadido para mantener la opacidad al pasar el mouse */
+}
+
+
+#cursos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.course-banner {
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+}
+
+.course-banner img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+    </style>
+</head>
+
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+            <style>
+                body {
+                    font-family: 'Arial', sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    background-color: #070707;
+                }
+        
+                nav {
+                    background-color: #333;
+                    padding: 10px;
+                    text-align: center;
+                }
+        
+                ul {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                }
+        
+                li {
+                    display: inline;
+                    margin: 0 10px;
+                }
+        
+                a {
+                    text-decoration: none;
+                    color: #070707;
+                    font-size: 18px;
+                    font-weight: bold;
+                    transition: color 0.3s;
+                }
+        
+                a:hover {
+                    color: #0a0a0a; /* Cambiar a color deseado al pasar el ratón */
+                }
+
+                button,button::after {
+  padding: 10px 50px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: transparent;
+  position: relative;
+}
+
+
+
+button::after {
+  --move1: inset(50% 50% 50% 50%);
+  --move2: inset(31% 0 40% 0);
+  --move3: inset(39% 0 15% 0);
+  --move4: inset(45% 0 40% 0);
+  --move5: inset(45% 0 6% 0);
+  --move6: inset(14% 0 61% 0);
+  clip-path: var(--move1);
+  content: 'MathRocks';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+}
+
+button:hover::after {
+  animation: glitch_4011 1s;
+  text-shadow: 10 10px 10px black;
+  animation-timing-function: steps(2, end);
+  text-shadow: -3px -3px 0px #1df2f0, 3px 3px 0px #E94BE8;
+  background-color: transparent;
+  border: 3px solid rgb(0, 255, 213);
+}
+
+button:hover {
+  text-shadow: -1px -1px 0px #1df2f0, 1px 1px 0px #E94BE8;
+}
+
+button:hover {
+  background-color: transparent;
+  border: 1px solid rgb(0, 255, 213);
+  box-shadow: 0px 10px 10px -10px rgb(0, 255, 213);
+}
+
+@keyframes glitch_4011 {
+  0% {
+    clip-path: var(--move1);
+    transform: translate(0px,-10px);
+  }
+
+  10% {
+    clip-path: var(--move2);
+    transform: translate(-10px,10px);
+  }
+
+  20% {
+    clip-path: var(--move3);
+    transform: translate(10px,0px);
+  }
+
+  30% {
+    clip-path: var(--move4);
+    transform: translate(-10px,10px);
+  }
+
+  40% {
+    clip-path: var(--move5);
+    transform: translate(10px,-10px);
+  }
+
+  50% {
+    clip-path: var(--move6);
+    transform: translate(-10px,10px);
+  }
+
+  60% {
+    clip-path: var(--move1);
+    transform: translate(10px,-10px);
+  }
+
+  70% {
+    clip-path: var(--move3);
+    transform: translate(-10px,10px);
+  }
+
+  80% {
+    clip-path: var(--move2);
+    transform: translate(10px,-10px);
+  }
+
+  90% {
+    clip-path: var(--move4);
+    transform: translate(-10px,10px);
+  }
+
+  100% {
+    clip-path: var(--move1);
+    transform: translate(0);
+  }
+}
+
+.bubble {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 500%;
+  box-shadow: inset 0 0 500px rgba (255, 255, 255, 0.25);
+  animation: animate_4010 8s ease-in-out infinite;
+}
+
+.bubble:nth-child(2) {
+  position: relative;
+  zoom: 0.45;
+  left: -10px;
+  top: -100px;
+  animation-delay: -4s;
+}
+
+.bubble:nth-child(3) {
+  position: relative;
+  zoom: 0.45;
+  right: 80px;
+  top: 300px;
+  animation-delay: -6s;
+}
+
+.bubble:nth-child(4) {
+  position: relative;
+  zoom: 0.35;
+  left: 120px;
+  bottom: 200px;
+  animation-delay: -3s;
+}
+
+.bubble:nth-child(5) {
+  position: relative;
+  zoom: 0.5;
+  left: 600px;
+  top: 800px;
+  animation-delay: -5s;
+}
+
+@keyframes animate_4010 {
+  0%,100% {
+    transform: translateY(-20px);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+.bubble::before {
+  content: '';
+  position: absolute;
+  top: 50px;
+  left: 450px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff;
+  z-index: 10;
+  filter: blur(2px);
+}
+
+.bubble::after {
+  content: '';
+  position: absolute;
+  top: 80px;
+  left: 800px;
+  width: 20px;
+  height: 20px;
+  border-radius: 500%;
+  background: #fff;
+  z-index: 10;
+  filter: blur(2px);
+}
+
+.bubble span {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.bubble span:nth-child(1) {
+  inset: 10px;
+  border-left: 15px solid #0fb4ff;
+  filter: blur(8px);
+}
+
+.bubble span:nth-child(2) {
+  inset: 10px;
+  border-right: 15px solid #ff4484;
+  filter: blur(8px);
+}
+
+.bubble span:nth-child(3) {
+  inset: 10px;
+  border-top: 15px solid #ffeb3b;
+  filter: blur(8px);
+}
+
+.bubble span:nth-child(4) {
+  inset: 30px;
+  border-left: 15px solid #ff4484;
+  filter: blur(12px);
+}
+
+.bubble span:nth-child(5) {
+  inset: 10px;
+  border-bottom: 10px solid #fff;
+  filter: blur(8px);
+  transform: rotate(330deg);
+}
+
+
+.button-options .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 5px #22f10f;
+  border-radius: -100000px;
+  position: relative;
+}
+.button-options .content .label-layout {
+  min-width: 450px;
+  height: 45px;
+  display: flexa;
+  align-items: center;
+  justify-content: center;
+}
+.button-options .content .label-layout :is(b, i, u) {
+  display: grid;
+  place-content: center;
+  height: 100%;
+  color: #fc7f0b;
+  font-size: 17px;
+  line-height: 1;
+  cursor: pointer;
+}
+.button-options .content .label-layout[for="italicInput"] {
+  border-left: solid 2px #0cfa20;
+  border-right: solid 2px #01f70d;
+  min-width: 49px;
+}
+.button-options .content input[type="checkbox"]:checked + .label-layout {
+  background-color: #0483faec;
+}
+#boldInput:checked ~ .title {
+  font-weight: bold;
+}
+#italicInput:checked ~ .title {
+  font-style: italic;
+}
+#underlineInput:checked ~ .title {
+  text-decoration: underline;
+}
+.button-options .title {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  position: absolute;
+  bottom: 0;
+  top: 2px;
+  transform: translateY(100%);
+  color: #f70b0b;
+}
+
+
+
+
+            </style>
+
+
+
+        </head>
+
+                </ul>
+            </nav>
+
+            <section id="cursos" class="video-section">
+                <video autoplay muted loop>
+                    <source src="./Math Rocks - Files/stars2.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video
+                </video>
+            
+        </body>
+
+        <section id="cursos">
+            <!-- Cuadros de cursos existentes -->
+            <div class="course-banner">
+                <a href="https://www.youtube.com/watch?v=4hltqDW-yCA&list=PLQjNNgZtKrjQn3b1exCniKNQZz-Mu4FCm">
+                    <img src="./Math Rocks - Files/bullet.png" alt="DIFERENCIALES">
+                    <h2>CÁLCULO DIFERENCIAL</h2>
+                </a>
+            </div>
+        
+            <div class="course-banner">
+                <a href="https://www.youtube.com/watch?v=KJYk9AJ7m0A&list=PLQjNNgZtKrjTlYs4GQQZKy26e-tuFPHw2">
+                    <img src="./Math Rocks - Files/bullet.png" alt="INTEGRALES">
+                    <h2>CÁLCULO INTEGRAL</h2>
+                </a>
+            </div>
+            <div class="course-banner">
+                <a href="https://www.youtube.com/watch?v=Yu3H9yLzOB8&list=PLQjNNgZtKrjQstBaFXBwnVJPJJRfbllSp">
+                    <img src="./Math Rocks - Files/bullet.png" alt="ÁLGEBRA">
+                    <h2>ÁLGEBRA</h2>
+                </a>
+            </div>
+            <div class="course-banner">
+                <a href="https://www.youtube.com/playlist?list=PLQjNNgZtKrjTEMH5RTZoiRR3DZQAc_7KD">
+                    <img src="./Math Rocks - Files/bullet.png" alt="CÁLCULO VECTORIAL">
+                    <h2>CÁLCULO VECTORIAL</h2>
+                </a>
+            </div>
+            <div class="course-banner">
+                <a href="https://www.youtube.com/watch?v=PNXNc2so9N4&list=PLQjNNgZtKrjSIdJfwpJg3WvkI54SU90-T">
+                    <img src="./Math Rocks - Files/bullet.png" alt="LÓGICA Y DEMOSTRACIONES">
+                    <h2>LÓGICA Y DEMOSTRACIONES</h2>
+                </a>
+            </div>
+        
+
+    <!-- Agrega más cursos aquí... -->
+
+    <div class="course-banner">
+      <a href="https://www.youtube.com/playlist?list=PLQjNNgZtKrjQYdM5PMX2HD3unrsPm5AuA">
+          <img src="./Math Rocks - Files/bullet.png" alt="VARIABLE COMPLEJA">
+          <h2>VARIABLE COMPLEJA</h2>
+      </a>
+  </div>
+
+
+<div class="course-banner">
+  <a href="https://www.youtube.com/watch?v=HHG2u43kgOo&list=PLQjNNgZtKrjR2EC8nh8OO-d1Ici7kW3cW">
+      <img src="./Math Rocks - Files/bullet.png" alt="PROBABILIDAD Y ESTADÍSTICA">
+      <h2>PROBABILIDAD Y ESTADÍSTICA</h2>
+  </a>
+</div>
+
+<div class="course-banner">
+  <a href="https://www.youtube.com/watch?v=QSYGIOabdfw&list=PLQjNNgZtKrjTi5fR3M6vM3y_5TyBE-rst">
+      <img src="./Math Rocks - Files/bullet.png" alt="GEOMETRÍA ANALÍTICA">
+      <h2>GEOMETRÍA ANALÍTICA</h2>
+  </a>
+</div>
+
+<!-- Agrega más cursos aquí... -->
+
+<div class="course-banner">
+  <a href="https://www.youtube.com/watch?v=vvuY8z7Z5X0&list=PLQjNNgZtKrjRLuYkKQTtL18bVs6qBxCTY">
+      <img src="./Math Rocks - Files/bullet.png" alt="GEOMETRÍA PLANA Y TRIGONOMETRÍA">
+      <h2>GEOMETRÍA Y TRIGONOMETRÍA</h2>
+  </a>
+</div>
+
+
+<div class="course-banner">
+<a href="https://www.youtube.com/watch?v=GHua06kzvtg&list=PLQjNNgZtKrjTOfu2wMu4Un6zXroblmnQj">
+  <img src="./Math Rocks - Files/bullet.png" alt="FÍSICA PREUNIVERSITARIA">
+  <h2>FÍSICA PREUNIVERSITARIA</h2>
+</a>
+</div>
+
+ <!-- Agrega más cursos aquí... -->
+
+ <div class="course-banner">
+  <a href="https://www.youtube.com/playlist?list=PLQjNNgZtKrjTJ_ueCQp4p_RkjDUd_Llo6">
+      <img src="./Math Rocks - Files/bullet.png" alt="ÁLGEBRA LÍNEAL">
+      <h2>ÁLGEBRA LINEAL</h2>
+  </a>
+</div>
+
+
+<div class="course-banner">
+<a href="https://www.youtube.com/watch?v=o1a7Xp9crho&list=PLQjNNgZtKrjRkCRHcie7dBdw32l8ujGgJ">
+  <img src="./Math Rocks - Files/bullet.png" alt="MATEMÁTICAS AVANZADAS">
+  <h2>MATEMÁTICAS AVANZADAS</h2>
+</a>
+</div>
+
+<div class="course-banner">
+<a href="https://www.youtube.com/watch?v=gK_kZ0YH7QA&list=PLQjNNgZtKrjQ9BHpNnZju4RtB6PGiL0EG">
+  <img src="./Math Rocks - Files/bullet.png" alt="ECUACIONES DIFERENCIALES">
+  <h2>ECUACIONES DIFERENCIALES</h2>
+</a>
+</div>
+
+</section>
+
+<div class="course-banner">
+  <a href="course-details.html">
+      <img src="./Math Rocks - Files/test.jpg" alt="TEST">
+  </a>
+</div>
+
+    <!-- Agrega más cursos aquí... -->
+
+    <div class="course-banner">
+      <a href="course-details.html">
+          <img src="./Math Rocks - Files/test.jpg" alt="TEST">
+      </a>
+  </div>
+</section>
+
+                
+            </div>
+
+            
+        </section>
+
+        
+        </section>
+
