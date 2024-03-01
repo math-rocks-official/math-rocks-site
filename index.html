@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <!-- saved from url=(0014)about:internet -->
 <html lang="es">
@@ -521,86 +520,6 @@ section h2 {
 
 @media only screen and (min-width: 1025px) {
 /* Estilos para pantallas más grandes */
-}
-
-.course-banner {
-
-  width: 100%; /* Se expandirá al 100% del contenedor padre */
-max-width: 400px; /* Máximo ancho para evitar que sea demasiado ancho en pantallas grandes */
-margin: 0 auto; /* Centra el contenido */
-overflow: hidden;
-border: 1px solid #ccc; /* Añade un borde para resaltar el cuadro */
-}
-
-.course-banner a {
-display: block;
-text-decoration: none;
-}
-
-.course-banner img {
-width: 100%; /* Asegura que la imagen se ajuste al ancho del cuadro */
-}
-
-.course-banner h2 {
-font-size: 16px; /* Ajusta el tamaño de fuente según tus necesidades */
-letter-spacing: -1px; /* Ajusta el espaciado entre letras según tus necesidades */
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
-margin: 5px 0; /* Añade un poco de espacio alrededor del texto */
-}
-
-/* Ajustes para la sección de cursos */
-#cursos {
-display: flex;
-flex-wrap: wrap;
-justify-content: space-around;
-}
-
-/* Ajustes para el banner de los cursos */
-.course-banner {
-width: 200px;
-height: 250px; /* Ajusta la altura según tus necesidades */
-margin: 10px;
-text-align: center;
-background-color: #0871e9;
-border-radius: 15px;
-position: relative;
-overflow: hidden;
-transition: transform 0.5s;
-}
-
-.course-banner:hover {
-transform: scale(1.1);
-}
-
-.course-banner a {
-text-decoration: none;
-color: #fff;
-display: block;
-height: 100%;
-}
-
-.course-banner img {
-width: 100%;
-height: auto;
-}
-
-.course-banner h2 {
-font-style: italic;
-font-weight: bold;
-margin: 0;
-position: absolute;
-top: 50%;
-left: 0;
-width: 100%;
-transform: translate(-50%, -50%);
-transition: opacity 0.5s;
-}
-
-.course-banner:hover h2 {
-opacity: 0.8;
-}
 
 /* Estilos para el video de fondo */
 #cursos video {
@@ -659,207 +578,6 @@ padding: 20px;
 section h2 {
 margin-bottom: 20px;
 }
-
-/* Estilos para la sección de cursos */
-#cursos {
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-/* Ajustes para la sección de cursos */
-#cursos {
-display: flex;
-justify-content: center; /* Centrado horizontalmente */
-align-items: center; /* Centrado verticalmente */
-height: 100vh; /* Ajusta según sea necesario para el centrado vertical */
-}
-
-/* Ajustes para el banner de los cursos */
-.course-banner {
-width: 200px;
-height: 250px; /* Ajusta la altura según tus necesidades */
-text-align: center;
-background-color: #0871e9;
-border-radius: 15px;
-position: relative;
-overflow: hidden;
-transition: transform 0.5s;
-}
-
-.course-banner:hover {
-transform: scale(1.1);
-}
-
-.course-banner a {
-text-decoration: none;
-color: #fff;
-display: block;
-height: 100%;
-}
-
-.course-banner img {
-width: 100%;
-height: auto;
-}
-
-.course-banner h2 {
-font-style: italic;
-font-weight: bold;
-margin: 0;
-position: absolute;
-top: 50%;
-left: 0;
-width: 100%;
-transform: translate(-50%, -50%);
-transition: opacity 0.5s;
-}
-
-.course-banner:hover h2 {
-opacity: 0.8;
-}
-
-/* Ajustes para la sección de cursos */
-#cursos {
-display: flex;
-justify-content: space-around;
-flex-wrap: nowrap; /* Evita que se envuelva en varias líneas */
-overflow-x: auto; /* Agrega una barra de desplazamiento horizontal si es necesario */
-}
-
-/* Ajustes para el banner de los cursos */
-.course-banner {
-width: 20px;
-height: -200px; /* Ajusta la altura según tus necesidades */
-margin: 10px;
-text-align: center;
-background-color: #0871e9;
-border-radius: 15px;
-position: relative;
-overflow: hidden;
-transition: transform 0.5s;
-}
-
-.course-banner:hover {
-transform: scale(1.1);
-}
-
-.course-banner a {
-text-decoration: none;
-color: #fff;
-display: block;
-height: 100%;
-}
-
-.course-banner img {
-width: 100%;
-height: auto;
-}
-
-.course-banner h2 {
-font-style: italic;
-font-weight: bold;
-margin: 0;
-position: absolute;
-top: 50%;
-left: 0;
-width: 10%;
-transform: translate(-50%, -50%);
-transition: opacity 0.5s;
-}
-
-.course-banner:hover h2 {
-opacity: 0.8;
-}
-
-/* Estilos para el banner de los cursos */
-.course-banner {
-display: inline-block;
-width: -20px;
-height: -20px;
-background-color: #e90808;
-text-align: center;
-line-height: 200px;
-margin: 150px;
-border-radius: 100px;
-transition: transform 0.5s;
-}
-
-.course-banner:hover {
-transform: scale(1.1);
-}
-
-
-/* Estilos para el banner de los cursos */
-
-.courses-container {
-    display: flex; /* Cambiado de block a flex para permitir múltiples columnas */
-    flex-wrap: wrap; /* Añadido para permitir que los cuadros se envuelvan en varias líneas */
-    max-width: 850px; /* Ajusta según el ancho deseado para evitar que se extienda demasiado */
-    margin: 0 auto; /* Centrar el contenedor */
-}
-
-.course-banner {
-display: inline-block;
-width: 10px;
-height: 200px;
-background-color: #0871e9;
-text-align: center;
-margin: 100px;
-border-radius: 15px;
-position: relative;
-overflow: hidden; /* Añadido para evitar que las letras se salgan del contenedor */
-}
-
-.course-banner a {
-text-decoration: none;
-color: #fff;
-display: block;
-height: 350%;
-}
-
-.course-banner img {
-vertical-align: middle;
-max-width: 60%;
-max-height: 200%;
-}
-
-.course-banner a h2 {
-font-style: italic;
-font-weight: bold;
-margin: 0;
-position: absolute;
-top: 75%;
-left: 0;
-width: 100%;
-transform: translateY(-50%);
-transform: translateX(100%)
-transition: opacity 0.5s; /* Añadido para una transición de opacidad */
-}
-
-.course-banner:hover a h2 {
-opacity: 2; /* Añadido para mantener la opacidad al pasar el mouse */
-}
-
-
-#cursos {
-display: flex;
-flex-wrap: wrap;
-justify-content: space-around;
-}
-
-.course-banner {
-width: 200px;
-margin: 10px;
-text-align: center;
-}
-
-.course-banner img {
-width: 100%;
-height: auto;
-}
-
-
 
 </style>
 </head>
@@ -1091,139 +809,76 @@ color: #f70b0b;
             Tu navegador no soporta la etiqueta de video.
         </video>
     </div>
-<style>
+    <style>
     .sectEventsSlider {
-    width: 100%; /* Ajusta el ancho según sea necesario */
-    margin: 0 auto; /* Centra el elemento horizontalmente */
-    text-align: center; /* Centra el texto dentro del elemento */
-}
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
 
-.navEventsSlider {
-    display: flex;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    margin-top: 10px; /* Espacio superior */
-}
+    .contTitleES {
+        background-color: #007bff;
+        padding: 10px;
+        margin-bottom: 30px;
+    }
 
-.listEventsSlider {
-    list-style-type: none; /* Elimina los puntos de la lista */
-    padding: 0;
-}
+    .titleES {
+        color: #fff;
+        margin: 0;
+    }
 
-.itemListES {
-    margin: 0 100px; /* Espacio entre los elementos de la lista */
-}
+    .navEventsSlider {
+        display: flex;
+        justify-content: center;
+    }
 
-.aElement {
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: #48caf1; /* Color del texto */
-    display: block; /* Hace que todo el área sea clickeable */
-}
+    .listEventsSlider {
+        list-style-type: none;
+        padding: 0;
+        margin: 5%;
+    }
 
-.imgItemListES {
-    width: 100px; /* Tamaño de la imagen */
-    height: 100px;
-    border-radius: 50%; /* Forma redondeada */
-}
+    .itemListES {
+        margin: 0 10px;
+    }
 
-.textItemListES {
-    margin-top: 10px; /* Espacio entre la imagen y el texto */
-}
-.sectEventsSlider {
-    width: 70%; /* Ajusta el ancho según sea necesario */
-    margin: 0 auto; /* Centra el elemento horizontalmente */
-    text-align: center; /* Centra el texto dentro del elemento */
-}
+    .aElement {
+        text-decoration: none;
+        color: #333;
+        display: block;
+        justify-content: center;
+    }
 
-.contTitleES {
-    background-color: #007bff; /* Color de fondo azul */
-    padding: 2px; /* Espaciado interno */
-    margin-bottom: 2px; /* Espacio inferior */
-}
+    .imgItemListES {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
 
-.titleES {
-    color: #fff; /* Color del texto blanco */
-    margin: 0; /* Elimina el margen predeterminado */
-}
+    .textItemListES {
+        margin-top: 10px;
+    }
 
-.navEventsSlider {
-    display: flex;
-    justify-content: center; /* Centra los elementos horizontalmente */
-}
+    .contTextItemListES {
+        display: flex;
+        justify-content: center;
+    }
 
-.listEventsSlider {
-    list-style-type: none; /* Elimina los puntos de la lista */
-    padding: 0;
-    margin: 0; /* Elimina el margen */
-}
+    @media only screen and (max-width: 768px) {
+        .listEventsSlider {
+            display: flex;
+            flex-direction: column;
+        }
 
-.itemListES {
-    margin: 0 10px; /* Espacio entre los elementos de la lista */
-}
-
-.aElement {
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: #d8fc3a; /* Color del texto */
-    display: block; /* Hace que todo el área sea clickeable */
-}
-
-.imgItemListES {
-    width: 100px; /* Tamaño de la imagen */
-    height: 100px;
-    border-radius: 50%; /* Forma redondeada */
-}
-
-.textItemListES {
-    margin-top: 10px; /* Espacio entre la imagen y el texto */
-}
-.sectEventsSlider {
-    width: 80%; /* Ajusta el ancho según sea necesario */
-    margin: 0 auto; /* Centra el elemento horizontalmente */
-    text-align: center; /* Centra el texto dentro del elemento */
-}
-
-.contTitleES {
-    background-color: #007bff; /* Color de fondo azul */
-    padding: 10px; /* Espaciado interno */
-    margin-bottom: 20px; /* Espacio inferior */
-}
-
-.titleES {
-    color: #fff; /* Color del texto blanco */
-    margin: 0; /* Elimina el margen predeterminado */
-}
-
-.navEventsSlider {
-    display: flex;
-    justify-content: center; /* Centra los elementos horizontalmente */
-}
-
-.listEventsSlider {
-    list-style-type: none; /* Elimina los puntos de la lista */
-    padding: 5%;
-    margin: 10%; /* Elimina el margen */
-}
-
-.itemListES {
-    margin: 0 50px; /* Espacio entre los elementos de la lista */
-}
-
-.aElement {
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: #333; /* Color del texto */
-    display: block; /* Hace que todo el área sea clickeable */
-}
-
-.imgItemListES {
-    width: 200px; /* Tamaño de la imagen */
-    height: 200px;
-    border-radius: 50%; /* Forma redondeada */
-}
-
-.textItemListES {
-    margin-top: 10px; /* Espacio entre la imagen y el texto */
-}
+        .itemListES {
+            margin-bottom: 2px;
+        }
+    }
 </style>
-    <section class="sectEventsSlider">
+
+
+<section class="sectEventsSlider">
     <div class="contTitleES">
         <h3 class="titleES">Math Rocks</h3>
     </div>
@@ -1240,19 +895,10 @@ color: #f70b0b;
                     </div>
                 </a>
             </li>
-            <li class="itemListES">
-                <a href="./newindex.html" target="_blank" class="aElement">
-                    <div class="contImgItemListES">
-                        <img src="./Math Rocks - Files/festimg.jfif" alt="" class="imgItemListES" loading="lazy">
-                    </div>
-                    <div class="contTextItemListES">
-                        <p class="textItemListES">Math Rocks Fest</p>
-                    </div>
-                </a>
-            </li>
         </ul>
     </nav>
 </section>
+
 
 
         </footer>
@@ -1265,6 +911,227 @@ color: #f70b0b;
     </body>
     </html>
     
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./Math Rocks - Files/mainResponsive.css">
+  <link rel="icon" href="https://mathrocks.net/wp-content/uploads/2020/05/cropped-logo-final-1-32x32.png">
+  <title>Math Rocks Fest II</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden; /* Para evitar barras de desplazamiento horizontal */
+    }
+
+    /* Estilos para el video de fondo */
+    #video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; /* Para que esté detrás del contenido */
+      object-fit: cover;
+    }
+
+    /* Estilos para el contenedor del banner */
+    #banner-container {
+      position: relative;
+      width: 100%;
+      height: 500px; /* Altura ajustable según tus necesidades */
+      overflow: hidden; /* Para ocultar el desbordamiento de las imágenes */
+      margin-bottom: 50px; /* Espacio para la sección inferior */
+    }
+
+    /* Estilos para las imágenes dentro del banner */
+    .banner-img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: auto;
+      height: auto;
+      max-width: 100%; /* Máximo ancho del contenedor */
+      max-height: 100%; /* Máxima altura del contenedor */
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    /* Estilos específicos para la banner-img activa */
+    .banner-img.active {
+      opacity: 1;
+    }
+
+    /* Estilos para el botón de desplazamiento */
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      background-color: rgba(80, 5, 5, 0.9); /* Fondo semi-transparente */
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px; /* Tamaño del icono */
+      color: white; /* Color del icono */
+    }
+
+    /* Estilos específicos para la flecha izquierda */
+    .arrow.left {
+      left: 20px; /* Ajuste para que esté más a la izquierda */
+    }
+
+    /* Estilos específicos para la flecha derecha */
+    .arrow.right {
+      right: 20px; /* Ajuste para que esté más a la derecha */
+    }
+
+    .arrow:hover {
+      background-color: rgba(80, 5, 5, 0.9); /* Brillo al pasar el ratón */
+    }
+
+    /* Estilos para la sección inferior */
+    #lower-section {
+      background-color: #f0f0f0;
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    /* Estilos para el contenido de la sección inferior */
+    #lower-section-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    #lower-section-content img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+      /* Estilos para el resplandor del texto */
+      .glowing-text {
+      color: black;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Efecto de resplandor */
+    }
+  </style>
+</head>
+<body>
+  <!-- Video de fondo -->
+  <video autoplay muted loop id="video-background">
+    <source src="./Math Rocks - Files/mathfest.mp4" type="video/mp4">
+    Tu navegador no soporta el elemento de video.
+  </video>
+
+  <!-- Contenedor del banner deslizable -->
+  <div id="banner-container">
+    <!-- Imágenes del banner -->
+    <div id="banner-images">
+      <img class="banner-img active" src="./Math Rocks - Files/Ponentes/jp.png" alt="Imagen 1">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/jc.png" alt="Imagen 2">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/df.png" alt="Imagen 3">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/dv.png" alt="Imagen 4">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/ab.png" alt="Imagen 5">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/jf.png" alt="Imagen 6">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/rc.png" alt="Imagen 7">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/dd.png" alt="Imagen 8">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/mp.png" alt="Imagen 9">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/fs.png" alt="Imagen 10">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/ma.png" alt="Imagen 11">
+      <!-- Agrega más imágenes según sea necesario -->
+    </div>
+
+    <!-- Flecha izquierda -->
+    <div class="arrow left" onclick="scrollBanner(-1)">&#10094;</div>
+    <!-- Flecha derecha -->
+    <div class="arrow right" onclick="scrollBanner(1)">&#10095;</div>
+  </div>
+
+  <!-- Sección inferior -->
+<section id="lower-section">
+  <div id="lower-section-content">
+    <!-- Aquí puedes agregar tu contenido para la sección inferior -->
+    <h2 style="font-style: italic; color: #333; font-size: 50px;">MATH ROCKS FEST II</h2>
+    <p style="font-style: italic; color: #666; font-size: 35px;">¿Quieres hacer historia con nosotros?</p>
+    <img src="./Math Rocks - Files/festconf.jpg" alt="Tu imagen" style="width: 1000px; height: 1020px; border-radius: 10%;">
+    <p style="font-style: italic; color: #777; line-height: 1.6; font-size: 30px;">Este 8 de junio serás testigo de un emocionante viaje al reino del conocimiento y el descubrimiento como nunca antes lo habías visto. Sé parte del festival de enseñanza y divulgación científica más esperado del año, el MATH ROCKS Fest 2.0; donde la ciencia cobra vida y la curiosidad no conoce límites.<br>¡PREVENTA DE BOLETOS INICIA 1 DE MARZO <a href="#" style="text-decoration: none; color: #007bff;">AQUÍ</a>!</p>
+    <section id="payments-section">
+      <h2 style="font-size: 50px;">PAGOS</h2>
+      <div class="payments-card-container">
+        <!-- Tarjeta de pago con PayPal -->
+        <div class="payments-card">
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <div style="padding: 20px;">
+              <img src="./Math Rocks - Files/paymath.png" alt="Tu imagen" style="width: 500px; height: 502px; border-radius: 10%;">
+              <h2 style="font-style: italic; color: #333; font-size: 30px;">Nombre completo en el recuadro de quién recoge con una identificación</h2>
+              <input type="text" name="os0" maxLength="200" style="width: 100%; padding: 10px; font-size: 16px; border-radius: 10px; border: none; background-color: rgba(255, 255, 255, 0.8); box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.5);" />
+            </div>
+            <input type="hidden" name="cmd" value="_s-xclick" />
+            <input type="hidden" name="hosted_button_id" value="G7Z5KS2H6AYP6" />
+            <input type="hidden" name="currency_code" value="MXN" />
+            <input type="image" src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" title="PayPal es una forma segura y fácil de pagar en línea." alt="Comprar ahora" style="display: block; margin: 0 auto; margin-top: 20px; width: 200px; height: auto;" />
+            <h2 style="font-style: italic; color: #333; font-size: 50px;">- PAGO CON TARJETA BANCARIA -</h2>
+            <img src="./Math Rocks - Files/tb2.jpg" alt="Tu imagen" style="width: 500px; height: 502px; border-radius: 10%;">
+            <br></br>
+            <img src="./Math Rocks - Files/rulement.jpg" alt="Tu imagen" style="width: 500px; height: 502px; border-radius: 10%;">
+            <p style="font-style: italic; color: #777; line-height: 1.6; font-size: 35px;">Interactúa con tus Edutubers y Divulgadores FAVORITOS, habrá firma de AUTÓGRAFOS, toma de FOTOS, LIBROS, REGALOS y muchas SORPRESAS.
+              Podrás disfrutar de un escenario INCREÍBLE con una MEGA PANTALLA de 8 metros para deleitarte con las conferencias. <br> 
+              Ya que pagues envía tu comprobante a las redes del canal de Math Rocks para que el día del evento con una IDENTIFICACIÓN recojas tus boletos en físico y seas parte de esta INCREÍBLE HISTORIA, el costo del Boleto te da acceso a TODO el EVENTO</p></p>
+              <img src="./Math Rocks - Files/tb2.jpg" alt="Tu imagen" style="width: 500px; height: 502px; border-radius: 10%;">
+
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+
+
+
+  <!-- Scripts al final del body -->
+  <script>
+    // Función para desplazar el banner
+    let currentImageIndex = 0;
+    const images = document.querySelectorAll('.banner-img');
+    const numImages = images.length;
+    let intervalId;
+
+    function scrollBanner(direction) {
+      clearInterval(intervalId); // Limpiar el intervalo para evitar conflictos
+      currentImageIndex = (currentImageIndex + direction + numImages) % numImages;
+      showImage(currentImageIndex);
+    }
+
+    // Función para mostrar la imagen actual
+    function showImage(index) {
+      images.forEach((img, idx) => {
+        if (idx === index) {
+          img.classList.add('active');
+        } else {
+          img.classList.remove('active');
+        }
+      });
+      startAutoScroll(); // Iniciar el desplazamiento automático después de mostrar la imagen
+    }
+
+    // Función para iniciar el desplazamiento automático
+    function startAutoScroll() {
+      intervalId = setInterval(() => {
+        currentImageIndex = (currentImageIndex + 1) % numImages;
+        showImage(currentImageIndex);
+      }, 30000); // Cambia aquí el tiempo de espera entre imágenes en milisegundos (30 segundos)
+    }
+  </script>
+</body>
+</html>
+
 <!-- Agrega la imagen a la izquierda del pie de página -->    
 
 <head>
@@ -1409,66 +1276,7 @@ body {
   width: 100%; /* Asegura que la imagen se ajuste al ancho del cuadro */
 }
 
-.course-banner h2 {
-  font-size: 16px; /* Ajusta el tamaño de fuente según tus necesidades */
-  letter-spacing: -1px; /* Ajusta el espaciado entre letras según tus necesidades */
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin: 5px 0; /* Añade un poco de espacio alrededor del texto */
-}
 
-        /* Ajustes para la sección de cursos */
-#cursos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-/* Ajustes para el banner de los cursos */
-.course-banner {
-    width: 200px;
-    height: 250px; /* Ajusta la altura según tus necesidades */
-    margin: 10px;
-    text-align: center;
-    background-color: #0871e9;
-    border-radius: 15px;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.5s;
-}
-
-.course-banner:hover {
-    transform: scale(1.1);
-}
-
-.course-banner a {
-    text-decoration: none;
-    color: #fff;
-    display: block;
-    height: 100%;
-}
-
-.course-banner img {
-    width: 100%;
-    height: auto;
-}
-
-.course-banner h2 {
-    font-style: italic;
-    font-weight: bold;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    transform: translate(-50%, -50%);
-    transition: opacity 0.5s;
-}
-
-.course-banner:hover h2 {
-    opacity: 0.8;
-}
 
         /* Estilos para el video de fondo */
         #cursos video {
@@ -1535,128 +1343,6 @@ section h2 {
     align-items: center;
 }
 
-/* Ajustes para la sección de cursos */
-#cursos {
-    display: flex;
-    justify-content: center; /* Centrado horizontalmente */
-    align-items: center; /* Centrado verticalmente */
-    height: 100vh; /* Ajusta según sea necesario para el centrado vertical */
-}
-
-/* Ajustes para el banner de los cursos */
-.course-banner {
-    width: 200px;
-    height: 250px; /* Ajusta la altura según tus necesidades */
-    text-align: center;
-    background-color: #0871e9;
-    border-radius: 15px;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.5s;
-}
-
-.course-banner:hover {
-    transform: scale(1.1);
-}
-
-.course-banner a {
-    text-decoration: none;
-    color: #fff;
-    display: block;
-    height: 100%;
-}
-
-.course-banner img {
-    width: 100%;
-    height: auto;
-}
-
-.course-banner h2 {
-    font-style: italic;
-    font-weight: bold;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    transform: translate(-50%, -50%);
-    transition: opacity 0.5s;
-}
-
-.course-banner:hover h2 {
-    opacity: 0.8;
-}
-
-/* Ajustes para la sección de cursos */
-#cursos {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: nowrap; /* Evita que se envuelva en varias líneas */
-    overflow-x: auto; /* Agrega una barra de desplazamiento horizontal si es necesario */
-}
-
-/* Ajustes para el banner de los cursos */
-.course-banner {
-    width: 20px;
-    height: -200px; /* Ajusta la altura según tus necesidades */
-    margin: 10px;
-    text-align: center;
-    background-color: #0871e9;
-    border-radius: 15px;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.5s;
-}
-
-.course-banner:hover {
-    transform: scale(1.1);
-}
-
-.course-banner a {
-    text-decoration: none;
-    color: #fff;
-    display: block;
-    height: 100%;
-}
-
-.course-banner img {
-    width: 100%;
-    height: auto;
-}
-
-.course-banner h2 {
-    font-style: italic;
-    font-weight: bold;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 10%;
-    transform: translate(-50%, -50%);
-    transition: opacity 0.5s;
-}
-
-.course-banner:hover h2 {
-    opacity: 0.8;
-}
-
-/* Estilos para el banner de los cursos */
-.course-banner {
-    display: inline-block;
-    width: -20px;
-    height: -20px;
-    background-color: #e90808;
-    text-align: center;
-    line-height: 200px;
-    margin: 150px;
-    border-radius: 100px;
-    transition: transform 0.5s;
-}
-
-.course-banner:hover {
-    transform: scale(1.1);
-}
-
 
 
 /* Estilos para la sección de eventos */
@@ -1681,68 +1367,6 @@ footer {
             margin: 0 auto; /* Centrar el contenedor */
         }
    
-.course-banner {
-    display: inline-block;
-    width: 10px;
-    height: 200px;
-    background-color: #0871e9;
-    text-align: center;
-    margin: 100px;
-    border-radius: 15px;
-    position: relative;
-    overflow: hidden; /* Añadido para evitar que las letras se salgan del contenedor */
-}
-
-.course-banner a {
-    text-decoration: none;
-    color: #fff;
-    display: block;
-    height: 350%;
-}
-
-.course-banner img {
-    vertical-align: middle;
-    max-width: 47%;
-    max-height: 200%;
-}
-
-.course-banner a h2 {
-    font-style: italic;
-    font-weight: bold;
-    margin: 0;
-    position: absolute;
-    top: 15%;
-    left: 0;
-    width: 100%;
-    transform: translateY(-50%);
-    transform: translateX(100%)
-    transition: opacity 0.5s; /* Añadido para una transición de opacidad */
-}
-
-.course-banner:hover a h2 {
-    opacity: 2; /* Añadido para mantener la opacidad al pasar el mouse */
-}
-
-
-#cursos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.course-banner {
-    width: 200px;
-    margin: 10px;
-    text-align: center;
-}
-
-.course-banner img {
-    width: 100%;
-    height: auto;
-}
-
-
-
     </style>
 </head>
 <body>
@@ -2007,7 +1631,7 @@ button:hover {
 
 
 
-        <p>¿Estás listo para formar de esta experiencia inmersiva?</p>
+        <p style="font-style: italic; color: #fbfcfd; font-size: 35px;">¿Estás list@ para formar parte de ésta experiencia inmersiva?</p>
 
         <div class="event-container">
           <div class="card">
@@ -2038,7 +1662,7 @@ button:hover {
               </div>
           </div>
       </div>
-  
+  <br></br>
       <style>
           /* ... (tu estilo actual) ... */
   
@@ -2130,6 +1754,222 @@ button:hover {
   /* ... (otros estilos) ... */
 </style>
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./Math Rocks - Files/mainResponsive.css">
+  <link rel="icon" href="https://mathrocks.net/wp-content/uploads/2020/05/cropped-logo-final-1-32x32.png">
+  <title>Math Rocks Fest II</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden; /* Para evitar barras de desplazamiento horizontal */
+    }
+
+    /* Estilos para el video de fondo */
+    #video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; /* Para que esté detrás del contenido */
+      object-fit: cover;
+    }
+
+    /* Estilos para el contenedor del banner */
+    #banner-container {
+      position: relative;
+      width: 100%;
+      height: 500px; /* Altura ajustable según tus necesidades */
+      overflow: hidden; /* Para ocultar el desbordamiento de las imágenes */
+      margin-bottom: 50px; /* Espacio para la sección inferior */
+    }
+
+    /* Estilos para las imágenes dentro del banner */
+    .banner-img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: auto;
+      height: auto;
+      max-width: 100%; /* Máximo ancho del contenedor */
+      max-height: 100%; /* Máxima altura del contenedor */
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    /* Estilos específicos para la banner-img activa */
+    .banner-img.active {
+      opacity: 1;
+    }
+
+    /* Estilos para el botón de desplazamiento */
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      background-color: rgba(80, 5, 5, 0.9); /* Fondo semi-transparente */
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px; /* Tamaño del icono */
+      color: white; /* Color del icono */
+    }
+
+    /* Estilos específicos para la flecha izquierda */
+    .arrow.left {
+      left: 20px; /* Ajuste para que esté más a la izquierda */
+    }
+
+    /* Estilos específicos para la flecha derecha */
+    .arrow.right {
+      right: 20px; /* Ajuste para que esté más a la derecha */
+    }
+
+    .arrow:hover {
+      background-color: rgba(80, 5, 5, 0.9); /* Brillo al pasar el ratón */
+    }
+
+    #lower-section {
+  background-color: rgba(240, 240, 240, 0.7); /* Cambia el último valor (0.7) para ajustar la transparencia, disminuirlo para mas transparencia */
+  padding: 50px 0;
+  text-align: center;
+}
+    /* Estilos para el contenido de la sección inferior */
+    #lower-section-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    #lower-section-content img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+      /* Estilos para el resplandor del texto */
+      .glowing-text {
+      color: black;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Efecto de resplandor */
+    }
+  </style>
+</head>
+<body>
+  <!-- Video de fondo -->
+  <video autoplay muted loop id="video-background">
+    <source src="./Math Rocks - Files/mathfest.mp4" type="video/mp4">
+    Tu navegador no soporta el elemento de video.
+  </video>
+
+  <!-- Contenedor del banner deslizable -->
+  <div id="banner-container">
+    <!-- Imágenes del banner -->
+    <div id="banner-images">
+      <img class="banner-img active" src="./Math Rocks - Files/Ponentes/jp.png" alt="Imagen 1">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/jc.png" alt="Imagen 2">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/df.png" alt="Imagen 3">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/dv.png" alt="Imagen 4">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/ab.png" alt="Imagen 5">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/jf.png" alt="Imagen 6">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/rc.png" alt="Imagen 7">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/dd.png" alt="Imagen 8">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/mp.png" alt="Imagen 9">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/fs.png" alt="Imagen 10">
+      <img class="banner-img" src="./Math Rocks - Files/Ponentes/ma.png" alt="Imagen 11">
+      <!-- Agrega más imágenes según sea necesario -->
+    </div>
+
+    <!-- Flecha izquierda -->
+    <div class="arrow left" onclick="scrollBanner(-1)">&#10094;</div>
+    <!-- Flecha derecha -->
+    <div class="arrow right" onclick="scrollBanner(1)">&#10095;</div>
+  </div>
+
+  <!-- Sección inferior -->
+<section id="lower-section">
+  <div id="lower-section-content">
+    <!-- Aquí puedes agregar tu contenido para la sección inferior -->
+    <h2 style="font-style: italic; color: #333; font-size: 50px;">MATH ROCKS FEST II</h2>
+    <p style="font-style: italic; color: #666; font-size: 35px;">¿Quieres hacer historia con nosotros?</p>
+    <img src="./Math Rocks - Files/festconf.jpg" alt="Tu imagen" style="width: 1000px; height: 994px; border-radius: 5%;">
+    <p style="font-style: italic; color: #777; line-height: 1.6; font-size: 30px;">Este 8 de junio serás testigo de un emocionante viaje al reino del conocimiento y el descubrimiento como nunca antes lo habías visto. Sé parte del festival de enseñanza y divulgación científica más esperado del año, el MATH ROCKS Fest 2.0; donde la ciencia cobra vida y la curiosidad no conoce límites.<br>¡PREVENTA DE BOLETOS INICIA 1 DE MARZO <a href="#" style="text-decoration: none; color: #007bff;">AQUÍ</a>!</p>
+    <section id="payments-section">
+        <h2 style="font-style: italic; color: #333; font-size: 50px;">PAGOS</h2>
+      <div class="payments-card-container">
+        <!-- Tarjeta de pago con PayPal -->
+        <div class="payments-card">
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <div style="padding: 20px;">
+              <img src="./Math Rocks - Files/paymath.png" alt="Tu imagen" style="width: 1000px; height: 990px; border-radius: 4%;">
+              <h2 style="font-style: italic; color: #333; font-size: 30px;">Nombre completo en el recuadro de quién recoge el día del evento con una identificación</h2>
+              <input type="text" name="os0" maxLength="200" style="width: 100%; padding: 10px; font-size: 16px; border-radius: 10px; border: none; background-color: rgba(255, 255, 255, 0.8); box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.5);" />
+            </div>
+            <input type="hidden" name="cmd" value="_s-xclick" />
+            <input type="hidden" name="hosted_button_id" value="G7Z5KS2H6AYP6" />
+            <input type="hidden" name="currency_code" value="MXN" />
+            <input type="image" src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" title="PayPal es una forma segura y fácil de pagar en línea." alt="Comprar ahora" style="display: block; margin: 0 auto; margin-top: 20px; width: 200px; height: auto;" />
+            <br></br>
+            <h2 style="font-style: italic; color: #333; font-size: 50px;">- PAGO CON TARJETA BANCARIA -</h2>
+            <img src="./Math Rocks - Files/payment.jpeg" alt="Tu imagen" style="width: 1000px; height: 1000px; border-radius: 10%;">
+            <p style="font-style: italic; color: #777; line-height: 1.6; font-size: 35px;">Interactúa con tus Edutubers y Divulgadores FAVORITOS, habrá firma de AUTÓGRAFOS, toma de FOTOS, LIBROS, REGALOS y muchas SORPRESAS.
+              Podrás disfrutar de un escenario INCREÍBLE con una MEGA PANTALLA de 8 metros para deleitarte con las conferencias. <br> 
+              Ya que pagues envía tu comprobante a las redes del canal de Math Rocks para que el día del evento con una IDENTIFICACIÓN recojas tus boletos en físico y seas parte de esta INCREÍBLE HISTORIA, el costo del Boleto te da acceso a TODO el EVENTO</p></p>
+              <br></br>
+              <img src="./Math Rocks - Files/rulement.jpg" alt="Tu imagen" style="width: 800px; height: 700px; border-radius: 4%;">
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+
+  <!-- Scripts al final del body -->
+  <script>
+    // Función para desplazar el banner
+    let currentImageIndex = 0;
+    const images = document.querySelectorAll('.banner-img');
+    const numImages = images.length;
+    let intervalId;
+
+    function scrollBanner(direction) {
+      clearInterval(intervalId); // Limpiar el intervalo para evitar conflictos
+      currentImageIndex = (currentImageIndex + direction + numImages) % numImages;
+      showImage(currentImageIndex);
+    }
+
+    // Función para mostrar la imagen actual
+    function showImage(index) {
+      images.forEach((img, idx) => {
+        if (idx === index) {
+          img.classList.add('active');
+        } else {
+          img.classList.remove('active');
+        }
+      });
+      startAutoScroll(); // Iniciar el desplazamiento automático después de mostrar la imagen
+    }
+
+    // Función para iniciar el desplazamiento automático
+    function startAutoScroll() {
+      intervalId = setInterval(() => {
+        currentImageIndex = (currentImageIndex + 1) % numImages;
+        showImage(currentImageIndex);
+      }, 30000); // Cambia aquí el tiempo de espera entre imágenes en milisegundos (30 segundos)
+    }
+  </script>
+</body>
+</html>
+
       <br></head></html></body></br>
           
               <div class="title">WE ALL L❤VE MATH ROCKS</div>
@@ -2168,7 +2008,7 @@ button:hover {
             </div>
             <div class="col-md-4">
                 <h3 style="font-size: 28px; font-weight: bold; margin-bottom: 30px;">Contacto</h3>
-                <p style="font-size: 18px; line-height: 1.6;">Para asuntos y consultas exclusivas, por favor contáctenos a través de mi correo electrónico oficial: <br> <adress><a href="mailto:mjcm_fock@hotmail.com">MathRocks</a></adress> </p>
+                <p style="font-size: 18px; line-height: 1.6;">Para asuntos y consultas exclusivas, por favor contáctenos a través de mi correo electrónico oficial: <br> <adress><a href="mailto:mjcmfock@gmail.com">MathRocks</a></adress> </p>
             </div>
         </div>
     </div>
@@ -2178,3 +2018,7 @@ button:hover {
 </html>
 
 
+
+
+
+                  <!-- Ángel Samuel Reséndiz González. CopyRight 2024. -->
