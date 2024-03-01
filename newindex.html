@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -148,7 +147,7 @@
     <!-- Aquí puedes agregar tu contenido para la sección inferior -->
     <h2 style="font-style: italic; color: #333; font-size: 50px;">MATH ROCKS FEST II</h2>
     <p style="font-style: italic; color: #666; font-size: 35px;">¿Quieres hacer historia con nosotros?</p>
-    <img src="./Math Rocks - Files/festconf.jpg" alt="Tu imagen" style="width: 1000px; height: 1020px; border-radius: 10%;">
+    <img src="./Math Rocks - Files/festconf.jpg" alt="Tu imagen" style="width: 1000px; height: 1020px; border-radius: 5%;">
     <p style="font-style: italic; color: #777; line-height: 1.6; font-size: 30px;">Este 8 de junio serás testigo de un emocionante viaje al reino del conocimiento y el descubrimiento como nunca antes lo habías visto. Sé parte del festival de enseñanza y divulgación científica más esperado del año, el MATH ROCKS Fest 2.0; donde la ciencia cobra vida y la curiosidad no conoce límites.<br>¡PREVENTA DE BOLETOS INICIA 1 DE MARZO <a href="#" style="text-decoration: none; color: #007bff;">AQUÍ</a>!</p>
     <section id="payments-section">
       <h2 style="font-size: 50px;">PAGOS</h2>
@@ -157,8 +156,8 @@
         <div class="payments-card">
           <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
             <div style="padding: 20px;">
-              <img src="./Math Rocks - Files/paymath.png" alt="Tu imagen" style="width: 500px; height: 502px; border-radius: 10%;">
-              <h3 style="text-align: center; font-size: 30px;">Nombre Completo en el recuadro de quien recoge con una Identificación</h3>
+              <img src="./Math Rocks - Files/paymath.png" alt="Tu imagen" style="width: 1000px; height: 1000px; border-radius: 10%;">
+              <h2 style="font-style: italic; color: #333; font-size: 30px;">Nombre completo en el recuadro de quién recoge con una identificación</h2>
               <input type="text" name="os0" maxLength="200" style="width: 100%; padding: 10px; font-size: 16px; border-radius: 10px; border: none; background-color: rgba(255, 255, 255, 0.8); box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.5);" />
             </div>
             <input type="hidden" name="cmd" value="_s-xclick" />
@@ -166,10 +165,14 @@
             <input type="hidden" name="currency_code" value="MXN" />
             <input type="image" src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" title="PayPal es una forma segura y fácil de pagar en línea." alt="Comprar ahora" style="display: block; margin: 0 auto; margin-top: 20px; width: 200px; height: auto;" />
             <h2 style="font-style: italic; color: #333; font-size: 50px;">- PAGO CON TARJETA BANCARIA -</h2>
-            <img src="./Math Rocks - Files/tb.png" alt="Tu imagen" style="width: 500px; height: 502px; border-radius: 10%;">
+            <img src="./Math Rocks - Files/payment.jpeg" alt="Tu imagen" style="width: 1000px; height: 1000px; border-radius: 10%;">
+            <br></br>
+
             <p style="font-style: italic; color: #777; line-height: 1.6; font-size: 35px;">Interactúa con tus Edutubers y Divulgadores FAVORITOS, habrá firma de AUTÓGRAFOS, toma de FOTOS, LIBROS, REGALOS y muchas SORPRESAS.
               Podrás disfrutar de un escenario INCREÍBLE con una MEGA PANTALLA de 8 metros para deleitarte con las conferencias. <br> 
               Ya que pagues envía tu comprobante a las redes del canal de Math Rocks para que el día del evento con una IDENTIFICACIÓN recojas tus boletos en físico y seas parte de esta INCREÍBLE HISTORIA, el costo del Boleto te da acceso a TODO el EVENTO</p></p>
+              <img src="./Math Rocks - Files/rulement.jpg" alt="Tu imagen" style="width: 1000px; height: 1000px; border-radius: 4%;">
+
           </form>
         </div>
       </div>
@@ -177,46 +180,3 @@
   </div>
 </section>
 
-
-  <!-- Sección de pagos -->
-  
-      <!-- Agrega más tarjetas de pago según sea necesario -->
-    </div>
-  </section>
-
-  <!-- Scripts al final del body -->
-  <script>
-    // Función para desplazar el banner
-    let currentImageIndex = 0;
-    const images = document.querySelectorAll('.banner-img');
-    const numImages = images.length;
-    let intervalId;
-
-    function scrollBanner(direction) {
-      clearInterval(intervalId); // Limpiar el intervalo para evitar conflictos
-      currentImageIndex = (currentImageIndex + direction + numImages) % numImages;
-      showImage(currentImageIndex);
-    }
-
-    // Función para mostrar la imagen actual
-    function showImage(index) {
-      images.forEach((img, idx) => {
-        if (idx === index) {
-          img.classList.add('active');
-        } else {
-          img.classList.remove('active');
-        }
-      });
-      startAutoScroll(); // Iniciar el desplazamiento automático después de mostrar la imagen
-    }
-
-    // Función para iniciar el desplazamiento automático
-    function startAutoScroll() {
-      intervalId = setInterval(() => {
-        currentImageIndex = (currentImageIndex + 1) % numImages;
-        showImage(currentImageIndex);
-      }, 30000); // Cambia aquí el tiempo de espera entre imágenes en milisegundos (30 segundos)
-    }
-  </script>
-</body>
-</html>
