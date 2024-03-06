@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarjeta Elegante</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f2f2f2;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 300px; /* Ancho fijo para ambas tarjetas */
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  margin-right: 20px;
+}
+
+.card-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card-text {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.line-divider {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.card-link:hover {
+  color: #0056b3;
+}
+
+.spacer {
+  width: 20px; /* Separación entre las dos tarjetas */
+}
+
+</style>
+<body>
+  <div class="container">
+    <div class="card">
+      <img src="./Math Rocks - Files/computadora.png" alt="Imagen" class="card-image">
+      <p class="card-text">Sitio para PC's, tablets y laptops </p>
+      <hr class="line-divider">
+      <a href="./index.html" target="_blank" class="card-link">Visitar sitio</a>
+    </div>
+    <div class="spacer"></div>
+    <div class="card smaller-card">
+      <img src="./Math Rocks - Files/celular.png" alt="Imagen" class="card-image">
+      <p class="card-text">Sitio para dispositivos móviles</p>
+      <hr class="line-divider">
+      <a href="./newindex.html" target="_blank" class="card-link">Visitar sitio</a>
+    </div>
+  </div>
+</body>
+</html>
