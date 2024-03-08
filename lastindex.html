@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tarjeta Elegante</title>
+  <link rel="stylesheet" href="./Math Rocks - Files/mainResponsive.css">
+  <title>Math Rocks Fest II Web</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <style>
@@ -18,18 +19,19 @@ body {
 
 .container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 
 .card {
-  width: 300px; /* Ancho fijo para ambas tarjetas */
+  width: 100%;
+  max-width: 400px; /* Ajustar el ancho máximo para mantener la legibilidad en pantallas grandes */
   text-align: center;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
   background-color: #fff;
-  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 .card-image {
@@ -50,22 +52,37 @@ body {
 }
 
 .card-link {
-  display: block;
-  text-decoration: none;
-  color: #007bff;
-  font-weight: bold;
-  transition: color 0.3s ease;
+display: block;
+text-decoration: none;
+color: #007bff;
+font-weight: bold;
+transition: color 0.3s ease;
 }
 
 .card-link:hover {
-  color: #0056b3;
+color: #0056b3;
 }
 
 .spacer {
-  width: 20px; /* Separación entre las dos tarjetas */
+width: 20px;
 }
 
+@media only screen and (min-width: 600px) {
+.container {
+flex-direction: row;
+justify-content: center;
+}
+
+.card {
+margin: 0 10px; /* Espacio entre las tarjetas en pantallas más grandes */
+}
+
+.spacer {
+display: none;
+}
+}
 </style>
+
 <body>
   <div class="container">
     <div class="card">
@@ -79,8 +96,10 @@ body {
       <img src="./Math Rocks - Files/celular.png" alt="Imagen" class="card-image">
       <p class="card-text">Sitio para dispositivos móviles</p>
       <hr class="line-divider">
-      <a href="./newindex.html" target="_blank" class="card-link">Visitar sitio</a>
-    </div>
+      <a href="./newindex.html" target="_blank" class="card-link">Vis
+itar sitio</a>
+</div>
+
   </div>
 </body>
 </html>
