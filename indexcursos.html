@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Math Rocks - Files/mainResponsive.css">
+  <link rel="icon" href="https://mathrocks.net/wp-content/uploads/2020/05/cropped-logo-final-1-32x32.png">
+    <title>Curso de Cálculo Diferencial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        header {
+    background-color: rgba(98, 235, 171, 0.6); /* Color translúcido */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+            line-height: 1.6;
+        }
+        .course-image {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .course-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .course-link a {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+        .course-link a:hover {
+            background-color: #45a049;
+        }
+        .loader {
+            border: 8px solid #f3f3f3; /* Light grey */
+            border-top: 8px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+            display: none; /* Ocultar por defecto */
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @media screen and (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+        }
+           /* Estilos para el video */
+           video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1; /* Para que esté detrás de todo */
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+        <h1>Curso de Cálculo Diferencial</h1>
+        <img src="./Math Rocks - Files/bullet.png" alt="Curso de Cálculo Diferencial" width="200" height="150">
+    </header>
+       <!-- Video de fondo -->
+       <video autoplay loop muted>
+        <source src="./Math Rocks - Files/stars3.mp4" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+    </video>
+      <div class="container">
+    <div class="container">
+        <div class="course-image">
+            <img src="./Math Rocks - Files/cursoimg.png" alt="Imagen del Curso" width="400" height="200">
+
+        </div>
+        <h2>Descripción del Curso</h2>
+        <p>El Cálculo Diferencial es una parte fundamental del análisis matemático, consiste en estudiar el cambio de las variables dependientes cuando cambian las variables independientes de las funciones o cuerpos matemáticos que son objeto del análisis. El principal ente de estudio en el cálculo diferencial es la derivada y se apoya constantemente en el concepto básico del límite por la definición formal de esta. El paso al límite es la principal herramienta que permite desarrollar la teoría del cálculo diferencial y la que lo diferencia claramente del álgebra, sin embargo, es necesario manejar adecuadamente esta última para entrar al estudio del cálculo diferencial.
+
+           </p>
+<style>
+        p {
+            text-align: center; /* Centrar el párrafo */
+            line-height: 1.6;
+            font-size: 20px; /* Tamaño de la fuente */
+        }
+</style>
+        <h3></h3>
+<blockquote>
+    <p>Ser consciente de la propia ignorancia es un gran paso hacia el saber,</p>
+    <cite>- Benjamín Disraeli.</cite>
+</blockquote>
+<!-- Agregar más testimonios según sea necesario -->
+        
+        <!-- Espacio para la información que quieras agregar -->
+        
+        <div class="course-link">
+            <a href="https://www.youtube.com/watch?v=4hltqDW-yCA&list=PLQjNNgZtKrjQn3b1exCniKNQZz-Mu4FCm" target="_blank" onclick="showLoader()">Ir al curso!</a>
+
+        </div>
+    <footer>
+        <style>
+            body {
+              font-family: 'Playfair Display', serif;
+              background-color: #f8f8f8;
+            }
+            
+            .frame {
+              max-width: 800px;
+              margin: 50px auto;
+              border: 1px solid #ccc;
+              border-radius: 10px;
+              background-color: #fff;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              animation: glowing 4s infinite alternate;
+            }
+            .container {
+              padding: 20px;
+              text-align: center;
+            }
+            .event-info {
+              background-color: #bdeef7;
+              border-radius: 10px;
+              padding: 20px;
+              margin-bottom: 20px;
+            }
+            #addToCalendar {
+              background-color: #4CAF50;
+              color: white;
+              padding: 15px 30px;
+              border: none;
+              border-radius: 5px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              margin-top: 20px;
+            }
+
+            
+        
+            @keyframes glowing {
+              0% {
+                box-shadow: 0 0 20px #f00;
+              }
+              100% {
+                box-shadow: 0 0 20px #f00, 0 0 40px #ff0000, 0 0 60px #ff0000;
+              }
+            }
+            
+          </style>
+        </head>
+        <body>
+        <div class="frame">
+          <div class="container">
+            <h1>Math Rocks</h1>
+            <div class="event-info">
+              <p><strong>Página Oficial del canal de Youtube MathRocks de matemáticas y ciencias</strong></p>
+              <p><strong>Soy un Matemático con Doctorado que en sus ratos libres se convierte en Math Rocks</strong></p>
+              
+              <p><strong>PD:</strong> Únete a nosotros en el <a href="./lastindex.html" target="_blank">Math Rocks Fest II</a>, donde convergen las mentes más brillantes de la divulgación científica y los influencers más destacados de YouTube. Prepárate para sumergirte en un día lleno de charlas cautivadoras, fascinantes y un ambiente ameno que te inspirará a descubrir el poder de las matemáticas y la ciencia. ¡No te pierdas la oportunidad de ser parte de este evento único en su clase!</p>
+            </div>
+    </footer>
+</body>
+</html>
