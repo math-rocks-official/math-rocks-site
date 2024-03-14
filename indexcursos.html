@@ -36,9 +36,13 @@
             line-height: 1.6;
         }
         .course-image {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+        text-align: center; /* Centra el contenido */
+        margin-bottom: 20px;
+    }
+    .course-image img {
+        display: block; /* Asegura que la imagen se centre correctamente */
+        margin: 0 auto; /* Centra horizontalmente la imagen */
+    }
         .course-link {
             text-align: center;
             margin-top: 20px;
@@ -129,7 +133,7 @@
             <a href="https://www.youtube.com/watch?v=4hltqDW-yCA&list=PLQjNNgZtKrjQn3b1exCniKNQZz-Mu4FCm" target="_blank" onclick="showLoader()">Ir al curso completo!</a>
 
         </div>
-
+<br></br>
 <style>
 .course-topics {
     margin-top: 30px;
@@ -196,11 +200,302 @@
     background-color: #363333ce;
 }
 
+/* Estilos para la ventana modal */
+.modal {
+  display: none; /* Oculta la ventana modal por defecto */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  background-color: #a9e8f8;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Estilos para el botón "Ver Temas del Curso" */
+        #openModalBtn {
+            background-color: #4CAF50;
+            color: rgb(255, 255, 255);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 20px auto;
+            display: block;
+            width: 200px;
+        }
+
+        #openModalBtn:hover {
+            background-color: #45a049;
+        }
+
+        /* Estilos para el contenido del modal */
+        .modal-content {
+            background-color: #aefafa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Estilos para los títulos dentro del modal */
+        .modal-content h3 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* Estilos para los enlaces dentro del modal */
+        .modal-content a {
+            background-color: #4CAF50;
+            color: rgb(250, 251, 252);
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .modal-content a:hover {
+            background-color: #45a049;
+        }
+
+        /* Estilos para el botón de cierre del modal */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+        }
+
+        /* Estilos para las líneas divisorias */
+        .topic {
+            position: relative;
+            border-bottom: 1px solid #0e0d0d;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .topic:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+/* SECCION HORARIOS ESCOLARES */
+
+.modalWindow-I{
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+}
+.modalWindow-A{
+    opacity: 1;
+    visibility: visible;
+    z-index: 10000;
+}
+.modalWindow{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    overflow: hidden;
+    user-select: none;
+    transition: 400ms ease;
+}
+.contentModalWindow{
+    width: 75vw;
+    height: auto;
+    max-width: 19rem;
+    max-height: 75vh;
+    border-radius: 8.5px;
+    background-color: rgba(104, 36, 68, 1);
+    padding: 1rem 2rem 1.5rem 2rem;
+    box-shadow: 0 0 10px #b18097;
+    backdrop-filter: blur(5px);
+    font-family: 'Rubik', sans-serif;
+    overflow-y: scroll;
+    -webkit-backdrop-filter: blur(5px);
+}
+
+    .navListModal{
+        display: flex;
+        justify-content: center;
+        font-family: 'Rubik', sans-serif;
+    }
+        .listModal{
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-direction: column;
+            list-style: none;
+        }
+            .subtitleModal{
+                text-align: center;
+                font-weight: lighter;
+                text-transform: uppercase;
+                text-shadow: 0 0 2.5px #fff;
+            }
+            .itemListModal:hover{
+                background-color: rgba(255, 255, 255, 0.2);
+                box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+            }
+            .itemListModal:active{
+                transform: scale(.97);
+            }
+            .itemListModal{
+                background-color: rgba(255, 255, 255, 0.3);
+                padding: .75rem 2rem;
+                border-radius: 5px;
+                box-shadow: 0 0 2.5px rgba(255, 255, 255, 0);
+                transition: 350ms ease;
+            }
+                .textItemModal{
+                    color: #fff;
+                }
+
+
+
+.contentModalWindow::-webkit-scrollbar{
+    width: 7.5px;
+    background-color: rgb(128, 56, 89);
+    border-radius: 0 8.5px 8.5px 0;
+}
+.contentModalWindow::-webkit-scrollbar-thumb{
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 25px;
+}
+.contentModalWindow::-webkit-scrollbar-thumb:hover{
+    background: rgba(255, 255, 255, 0.8);
+}
+.contentModalWindow::-webkit-scrollbar-thumb:active{
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+
+/* SECCION ESTUDIANTES */
+.sectStudents-I{
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+}
+.sectStudents-A{
+    opacity: 1;
+    visibility: visible;
+    z-index: 10000;
+}
+
+.sectStudents{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: 400ms ease;
+}
+    .contentSectStudents{
+        width: 75vw;
+        height: auto;
+        max-width: 19rem;
+        max-height: 75vh;
+        border-radius: 8.5px;
+        background-color: rgba(104, 36, 68, 1);
+        padding: 1rem 1.75rem;
+        box-shadow: 0 0 10px #b18097;
+        backdrop-filter: blur(5px);
+        font-family: 'Rubik', sans-serif;
+        -webkit-backdrop-filter: blur(5px);
+    }
+        .navListStudents{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .titleListStudents{
+            text-align: center;
+            padding-bottom: 1rem;
+        }
+            .listStudents{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 1rem;
+                list-style: none;
+            }
+                .itemListStudents:hover{
+                    background-color: rgba(255, 255, 255, 0.2);
+                    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+                }
+                .itemListStudents:active{
+                    transform: scale(.97);
+                }
+                .itemListStudents{
+                    padding: .5rem 1rem;
+                    background-color: rgba(255, 255, 255, .35);
+                    border-radius: 5px;
+                    transition: 350ms ease;
+
+                }
+                    .itemListStudents > p{
+
+                    }
 </style>
-<!-- Después del div con class="course-link" -->
-<div class="course-topics">
-    <h2>Temas del Curso</h2>
-    <br></br>
+
+<!-- Botón para abrir la ventana modal -->
+<button id="openModalBtn">Ver Temas del Curso</button>
+
+<!-- Estructura de la ventana modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <!-- Contenido de la ventana modal (temas del curso) -->
+    
+    <!-- Aquí puedes incluir tus temas del curso en lugar de los ejemplos -->
     <div class="topic">
         <h3>Apps que te facilitarán las matemáticas.</h3>
         
@@ -229,6 +524,187 @@
  
   <a href="https://www.youtube.com/watch?v=Nd3NTFtvEJI" target="_blank">Ver video</a>
 </div>
+
+<div class="topic">
+  <h3>Dominio, rango, inversa, gráfica y asíntotas función racional</h3>
+ 
+  <a href="https://www.youtube.com/watch?v=G6W6uOMpGNc" target="_blank">Ver video</a>
+</div>
+
+<div class="topic">
+  <h3>Resolver ecuaciones con logaritmos</h3>
+ 
+  <a href="https://www.youtube.com/watch?v=Tun9vVEDfnw" target="_blank">Ver video</a>
+</div>
+
+<div class="topic">
+  <h3>Como usar leyes de los logaritmos</h3>
+ 
+  <a href="https://www.youtube.com/watch?v=1pb_ZP5gbnE" target="_blank">Ver video</a>
+</div>
+
+<div class="topic">
+  <h3>Definición de límite por epsilon y delta</h3>
+ 
+  <a href="https://www.youtube.com/watch?v=dxG1fS0J0wE" target="_blank">Ver video</a>
+</div>
+
+<div class="topic">
+  <h3>Como calcular cualquier limite</h3>
+ 
+  <a href="https://www.youtube.com/watch?v=1j4WOSiVF74" target="_blank">Ver video</a>
+</div>
+
+<div class="topic">
+  <h3>Como factorización es fundamental en cálculo de limites</h3>
+ 
+  <a href="https://www.youtube.com/watch?v=HGLsvV_FioA" target="_blank">Ver video</a>
+</div>
+
+<div class="topic">
+  <h3>Factorizar trinomio general ax2+bx+c</h3>
+ 
+  <a href="https://www.youtube.com/watch?v=EkJhDr7uZr0" target="_blank">Ver video</a>
+</div>
+
+<div class="topic">
+  <h3>Factorizar completando trinomio cuadrado</h3>
+ 
+  <a href="https://www.youtube.com/watch?v=9QGNtINV3Lo" target="_blank">Ver video</a>
+</div>
+
+<div class="topic">
+  <h3>Factorizar diferencia de cuadrados</h3>
+ 
+  <a href="https://www.youtube.com/watch?v=5kQrzqXFgtU" target="_blank">Ver video</a>
+</div>
+
+<div class="topic">
+  <h3>Factorizar usando factor común</h3>
+ 
+  <a href="https://www.youtube.com/watch?v=IXfanJ77Enk" target="_blank">Ver video</a>
+</div>
+
+<div class="topic">
+  <h3>Factorizar trinomio de la forma x2+bx+c</h3>
+ 
+  <a href="https://www.youtube.com/watch?v=QziKyVpeEdI" target="_blank">Ver video</a>
+</div>
+
+<div class="topic">
+  <h3>Dominio, Rango e Inversa de una función logarítmica</h3>
+ 
+  <a href="https://www.youtube.com/watch?v=-7GxSOgYls4" target="_blank">Ver video</a>
+</div>
+
+<div class="topic">
+  <h3>Factorizar trinomio cuadrado perfecto</h3>
+ 
+  <a href="https://www.youtube.com/watch?v=2JZxHQT7T_s" target="_blank">Ver video</a>
+</div>
+
+<div class="topic">
+  <h3>Factorizar suma y diferencia de cubos</h3>
+ 
+  <a href="https://www.youtube.com/watch?v=E6TPpOw34AE" target="_blank">Ver video</a>
+</div>
+
+<div class="topic">
+  <h3>Factorizar agrupando términos</h3>
+ 
+  <a href="https://www.youtube.com/watch?v=UHhsGV_HZeg" target="_blank">Ver video</a>
+</div>
+
+<div class="topic">
+  <h3>Método de Po Shen Loh ecuaciones cuadráticas</h3>
+ 
+  <a href="https://www.youtube.com/watch?v=HZ9pHowTkDE" target="_blank">Ver video</a>
+</div>
+
+
+<div class="topic">
+  <h3>Graficar una cuadrática para sacar dominio</h3>
+ 
+  <a href="https://www.youtube.com/watch?v=UeSVGDqnk6k" target="_blank">Ver video</a>
+</div>
+
+<div class="topic">
+  <h3>Cómo resolver una desigualdad cuadrática (Dominio)</h3>
+ 
+  <a href="https://www.youtube.com/watch?v=r-eHykXAYbE" target="_blank">Ver video</a>
+</div>
+
+<div class="topic">
+  <h3>Cómo graficar una desigualdad cuadrática</h3>
+ 
+  <a href="https://www.youtube.com/watch?v=drBRQnugjDY" target="_blank">Ver video</a>
+</div>
+
+<div class="topic">
+  <h3>Continuidad de funciones</h3>
+ 
+  <a href="https://www.youtube.com/watch?v=eSOjcsR6Syc" target="_blank">Ver video</a>
+</div>
+
+<div class="topic">
+  <h3>Cómo calcular derivada por definición</h3>
+ 
+  <a href="https://www.youtube.com/watch?v=-qbTI5mO2e0" target="_blank">Ver video</a>
+</div>
+
+<div class="topic">
+  <h3>Aprende a derivar fácil y rápido</h3>
+ 
+  <a href="https://www.youtube.com/watch?v=4hltqDW-yCA" target="_blank">Ver video</a>
+</div>
+
+<div class="topic">
+  <h3>Cómo cálcular la derivada implícita</h3>
+ 
+  <a href="https://www.youtube.com/watch?v=4hltqDW-yCA" target="_blank">Ver video</a>
+</div>
+
+<div class="topic">
+  <h3>Aplicaciones de la derivada</h3>
+ 
+  <a href="https://www.youtube.com/watch?v=scBB_6TnuZg" target="_blank">Ver video</a>
+</div>
+      <!-- Contenido de los temas del curso -->
+    </div>
+  </div>
+</div>
+<script>
+    
+    
+// Obtiene el botón para abrir la ventana modal
+var openModalBtn = document.getElementById("openModalBtn");
+
+// Obtiene la ventana modal
+var modal = document.getElementById("myModal");
+
+// Obtiene el elemento de cierre de la ventana modal
+var closeBtn = document.getElementsByClassName("close")[0];
+
+// Cuando el usuario haga clic en el botón, muestra la ventana modal
+openModalBtn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// Cuando el usuario haga clic en el botón de cierre, oculta la ventana modal
+closeBtn.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Cuando el usuario haga clic fuera de la ventana modal, también la oculta
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+</script>
+<!-- Después del div con class="course-link" -->
+
     <!-- Puedes agregar más temas según sea necesario -->
 </div>
 
@@ -259,18 +735,6 @@
               border-radius: 10px;
               padding: 20px;
               margin-bottom: 20px;
-            }
-            #addToCalendar {
-              background-color: #4CAF50;
-              color: white;
-              padding: 15px 30px;
-              border: none;
-              border-radius: 5px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              margin-top: 20px;
             }
 
             
