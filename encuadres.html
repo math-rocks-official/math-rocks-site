@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .curso {
+            width: 30%;
+            margin: 2%;
+            background-color: #85aefa;
+            border: 1px solid #f10c0c;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .curso h2 {
+            margin-top: 0;
+        }
+        .curso img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .curso img {
+            max-width: 50%; /* Reducir el tamaño de la imagen */
+            height: auto;
+            margin-bottom: 10px; /* Agregar un pequeño margen inferior */
+        }
+        .ver-mas {
+            background-color: #4CAF50; /* Color de fondo */
+            border: none;
+            color: white;
+            padding: 10px 20px; /* Padding para hacer el botón más grande */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px; /* Agregar margen superior */
+            cursor: pointer;
+            border-radius: 5px; /* Bordes redondeados */
+            transition: background-color 0.3s; /* Transición suave para el color de fondo */
+        }
+        .ver-mas:hover {
+            background-color: #45a049; /* Cambiar el color de fondo al pasar el mouse */
+        }
+  
+    </style>
+</head>
+<body>
+
+    <!-- Video de fondo -->
+    <video autoplay muted loop id="video-background">
+    <source src="./Math Rocks - Files/stars3.mp4" type="video/mp4">
+    <source src="./Math Rocks - Files/stars3.mp4" type="video/webm">
+    Tu navegador no soporta el elemento de video.
+</video>
+
+<div class="curso">
+    <h2>Cálculo diferencial</h2>
+    <img src="./Math Rocks - Files/bullet.png" alt="Curso 1">
+    
+    <br></br>
+    <a href="./indexcursos.html" class="ver-mas">Ver más</a>
+</div>
+
+<div class="curso">
+    <h2>Curso 2</h2>
+    <img src="imagen_curso_2.jpg" alt="Curso 2">
+    <a href="curso2.html" target="_blank">Ver más</a>
+</div>
+
+<!-- Repite el siguiente bloque div para cada curso -->
+<!-- Agrega más divs .curso según sea necesario -->
+<!-- Curso 3 -->
+<div class="curso">
+    <h2>Curso 3</h2>
+    <img src="imagen_curso_3.jpg" alt="Curso 3">
+    <a href="curso3.html" target="_blank">Ver más</a>
+</div>
+
+<!-- Curso 4 -->
+<div class="curso">
+    <h2>Curso 4</h2>
+    <img src="imagen_curso_4.jpg" alt="Curso 4">
+    <a href="curso4.html" target="_blank">Ver más</a>
+</div>
+
+<!-- Curso 5 -->
+<div class="curso">
+    <h2>Curso 5</h2>
+    <img src="imagen_curso_5.jpg" alt="Curso 5">
+    <a href="curso5.html" target="_blank">Ver más</a>
+</div>
+
+<!-- Curso 6 -->
+<div class="curso">
+    <h2>Curso 6</h2>
+    <img src="imagen_curso_5.jpg" alt="Curso 5">
+    <a href="curso5.html" target="_blank">Ver más</a>
+</div>
+
+<!-- Curso 7 -->
+<div class="curso">
+    <h2>Curso 7</h2>
+    <img src="imagen_curso_5.jpg" alt="Curso 5">
+    <a href="curso5.html" target="_blank">Ver más</a>
+</div>
+
+<!-- Curso 8 -->
+<div class="curso">
+    <h2>Curso 8</h2>
+    <img src="imagen_curso_5.jpg" alt="Curso 5">
+    <a href="curso5.html" target="_blank">Ver más</a>
+</div>
+
+<!-- Curso 9 -->
+<div class="curso">
+    <h2>Curso 9</h2>
+    <img src="imagen_curso_5.jpg" alt="Curso 5">
+    <a href="curso5.html" target="_blank">Ver más</a>
+</div>
+
+<!-- Curso 10 -->
+<div class="curso">
+    <h2>Curso 10</h2>
+    <img src="imagen_curso_5.jpg" alt="Curso 5">
+    <a href="curso5.html" target="_blank">Ver más</a>
+</div>
+
+<!-- Curso 11 -->
+<div class="curso">
+    <h2>Curso 11</h2>
+    <img src="imagen_curso_5.jpg" alt="Curso 5">
+    <a href="curso5.html" target="_blank">Ver más</a>
+</div>
+
+<!-- Repite los bloques anteriores para cada curso, cambiando el número y el enlace de imagen según corresponda -->
+
+</body>
+</html>
