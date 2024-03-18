@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Math Rocks - Files/mainResponsive.css">
+    <link rel="icon" href="https://mathrocks.net/wp-content/uploads/2020/05/cropped-logo-final-1-32x32.png">
+    <title>Galería de Evento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #video-bg {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1; /* Asegura que el video esté detrás del contenido */
+            overflow: hidden;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.5); /* Cambiar el fondo de encabezado para que sea legible */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+            z-index: 1; /* Asegura que el contenido esté por encima del video de fondo */
+        }
+
+        .card {
+            width: 400px;
+            height: 500px; /* Aumentado el alto para dar espacio al pie de imagen */
+            margin-bottom: 20px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative; /* Necesario para posicionar el pie de imagen */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 40px rgba(189, 51, 69, 0.5); /* Agregado el efecto de resplandor */
+        }
+
+        .card img,
+        .card video {
+            width: 100%;
+            height: 60%;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.5); /* Cambiar el fondo del pie de página para que sea legible */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        .card-text {
+            text-align: center; /* Centrar el texto dentro de la tarjeta */
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="video-bg">
+        <source src="./Math Rocks - Files/stars3.mp4" type="video/mp4">
+        Tu navegador no soporta video HTML5.
+    </video>
+    <header>
+        <h1>Galería del Math Rocks FEST</h1>
+    </header>
+    <main id="gallery">
+        <!-- Aquí se cargarán las fotos, videos y reseñas -->
+    </main>
+    <footer>
+        <p>&copy; 2024 Galería de Evento</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const gallery = document.getElementById("gallery");
+
+            // Función para agregar una nueva tarjeta a la galería
+            function addCard(type, content, info) {
+                const card = document.createElement("div");
+                card.classList.add("card");
+                if (type === "photo") {
+                    card.innerHTML = `<img src="${content}" alt="Foto del evento">`;
+                } else if (type === "video") {
+                    card.innerHTML = `<video width="400" height="400" controls><source src="${content}" type="video/mp4">Tu navegador no soporta video HTML5.</video>`;
+                } else if (type === "review") {
+                    card.innerHTML = `<p class="card-text">${content}</p>`;
+                }
+                
+                const cardContent = document.createElement("div");
+                cardContent.classList.add("card-content");
+                cardContent.innerHTML = info;
+                card.appendChild(cardContent);
+                
+                const footer = document.createElement("div");
+                footer.classList.add("footer");
+                footer.innerHTML = "MATH ROCKS FEST I"; // Contenido del pie de imagen
+                card.appendChild(footer);
+                
+                gallery.appendChild(card);
+            }
+
+            // Agregar ejemplos de contenido con información breve
+            addCard("video", "./Math Rocks - Files/mathfest.mp4", "Video del Math Rocks FEST | CASIO MÉXICO");
+            addCard("photo", "./Math Rocks - Files/imgf1.jpg", "El público se lleva nuestro amor y todo el respeto porque se comportaron al nivel del evento más épico jámas visto!!");
+            addCard("photo", "imagen1.jpg", "Otra foto del evento");
+            addCard("photo", "imagen1.jpg", "Otra foto del evento");
+            addCard("photo", "imagen1.jpg", "Otra foto del evento");
+            addCard("photo", "imagen1.jpg", "Otra foto del evento");
+            addCard("photo", "imagen1.jpg", "Otra foto del evento");
+            addCard("photo", "imagen1.jpg", "Otra foto del evento");
+            addCard("review", "¡Excelente evento! Lo pasé genial.", "Reseña del evento");
+        });
+    </script>
+</body>
+</html>
