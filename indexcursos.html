@@ -20,14 +20,15 @@
     padding: 20px;
 }
 
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(189, 189, 189, 0.5); /* RGBA para agregar transparencia */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
         h1, h2 {
             text-align: center;
         }
@@ -90,13 +91,17 @@
             min-height: 100%;
             z-index: -1; /* Para que esté detrás de todo */
         }
+
+        
     </style>
 </head>
 <body>
     <header>
 
         <h1>Curso de Cálculo Diferencial</h1>
-        <img src="./Math Rocks - Files/bullet.png" alt="Curso de Cálculo Diferencial" width="200" height="150">
+        <a href="./encuadres.html" target="_blank">
+          <img src="./Math Rocks - Files/bullet.png" alt="Curso de Cálculo Diferencial" width="200" height="150">
+      </a>
     </header>
        <!-- Video de fondo -->
        <video autoplay loop muted>
@@ -202,80 +207,54 @@
 
 /* Estilos para la ventana modal */
 .modal {
-  display: none; /* Oculta la ventana modal por defecto */
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.8);
-}
-
-.modal-content {
-  background-color: #a9e8f8;
-  margin: 10% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-/* Estilos para el botón "Ver Temas del Curso" */
-        #openModalBtn {
-            background-color: #4CAF50;
-            color: rgb(255, 255, 255);
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            margin: 20px auto;
-            display: block;
-            width: 200px;
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(250, 158, 158, 0.8); /* Fondo semitransparente */
+            animation: slideIn 0.5s ease-out; /* Animación de deslizamiento */
         }
 
-        #openModalBtn:hover {
-            background-color: #45a049;
-        }
-
-        /* Estilos para el contenido del modal */
         .modal-content {
-            background-color: #aefafa;
+            background-color: #bcf8f0; /* Color de fondo de la ventana modal */
+            margin: 10% auto;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
             max-width: 600px;
-            margin: 0 auto;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
         }
 
         /* Estilos para los títulos dentro del modal */
         .modal-content h3 {
             color: #333;
-            font-size: 18px;
+            font-size: 20px;
             margin-bottom: 10px;
         }
 
         /* Estilos para los enlaces dentro del modal */
         .modal-content a {
             background-color: #4CAF50;
-            color: rgb(250, 251, 252);
-            padding: 8px 16px;
+            color: white;
+            padding: 10px 20px;
             border-radius: 5px;
             text-decoration: none;
             display: inline-block;
@@ -287,203 +266,83 @@
             background-color: #45a049;
         }
 
-        /* Estilos para el botón de cierre del modal */
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 24px;
-            font-weight: bold;
-            cursor: pointer;
+        /* Animación de deslizamiento */
+        @keyframes slideIn {
+            from {
+                top: -100%; /* Inicialmente fuera de la pantalla arriba */
+            }
+            to {
+                top: 0; /* Desliza hacia el centro */
+            }
         }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-        }
-
-        /* Estilos para las líneas divisorias */
-        .topic {
-            position: relative;
-            border-bottom: 1px solid #0e0d0d;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-        }
-
-        .topic:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-        }
-/* SECCION HORARIOS ESCOLARES */
-
-.modalWindow-I{
-    opacity: 0;
-    visibility: hidden;
-    z-index: -1;
-}
-.modalWindow-A{
-    opacity: 1;
-    visibility: visible;
-    z-index: 10000;
-}
-.modalWindow{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.4);
-    color: #fff;
-    overflow: hidden;
-    user-select: none;
-    transition: 400ms ease;
-}
-.contentModalWindow{
-    width: 75vw;
-    height: auto;
-    max-width: 19rem;
-    max-height: 75vh;
-    border-radius: 8.5px;
-    background-color: rgba(104, 36, 68, 1);
-    padding: 1rem 2rem 1.5rem 2rem;
-    box-shadow: 0 0 10px #b18097;
-    backdrop-filter: blur(5px);
-    font-family: 'Rubik', sans-serif;
-    overflow-y: scroll;
-    -webkit-backdrop-filter: blur(5px);
-}
-
-    .navListModal{
-        display: flex;
-        justify-content: center;
-        font-family: 'Rubik', sans-serif;
+            /* Estilos para las líneas divisorias */
+    .topic {
+        position: relative;
+        border-bottom: 1px solid #696969; /* Línea divisoria */
+        padding-bottom: 20px;
+        margin-bottom: 20px;
     }
-        .listModal{
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-direction: column;
-            list-style: none;
-        }
-            .subtitleModal{
-                text-align: center;
-                font-weight: lighter;
-                text-transform: uppercase;
-                text-shadow: 0 0 2.5px #fff;
-            }
-            .itemListModal:hover{
-                background-color: rgba(255, 255, 255, 0.2);
-                box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-            }
-            .itemListModal:active{
-                transform: scale(.97);
-            }
-            .itemListModal{
-                background-color: rgba(255, 255, 255, 0.3);
-                padding: .75rem 2rem;
-                border-radius: 5px;
-                box-shadow: 0 0 2.5px rgba(255, 255, 255, 0);
-                transition: 350ms ease;
-            }
-                .textItemModal{
-                    color: #fff;
-                }
 
-
-
-.contentModalWindow::-webkit-scrollbar{
-    width: 7.5px;
-    background-color: rgb(128, 56, 89);
-    border-radius: 0 8.5px 8.5px 0;
-}
-.contentModalWindow::-webkit-scrollbar-thumb{
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 25px;
-}
-.contentModalWindow::-webkit-scrollbar-thumb:hover{
-    background: rgba(255, 255, 255, 0.8);
-}
-.contentModalWindow::-webkit-scrollbar-thumb:active{
-    background-color: rgba(255, 255, 255, 0.25);
-}
-
-
-/* SECCION ESTUDIANTES */
-.sectStudents-I{
-    opacity: 0;
-    visibility: hidden;
-    z-index: -1;
-}
-.sectStudents-A{
-    opacity: 1;
-    visibility: visible;
-    z-index: 10000;
-}
-
-.sectStudents{
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    transition: 400ms ease;
-}
-    .contentSectStudents{
-        width: 75vw;
-        height: auto;
-        max-width: 19rem;
-        max-height: 75vh;
-        border-radius: 8.5px;
-        background-color: rgba(104, 36, 68, 1);
-        padding: 1rem 1.75rem;
-        box-shadow: 0 0 10px #b18097;
-        backdrop-filter: blur(5px);
-        font-family: 'Rubik', sans-serif;
-        -webkit-backdrop-filter: blur(5px);
+    .topic:last-child {
+        border-bottom: none; /* Eliminar línea divisoria del último tema */
+        margin-bottom: 0;
     }
-        .navListStudents{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        .titleListStudents{
-            text-align: center;
-            padding-bottom: 1rem;
-        }
-            .listStudents{
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                gap: 1rem;
-                list-style: none;
-            }
-                .itemListStudents:hover{
-                    background-color: rgba(255, 255, 255, 0.2);
-                    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-                }
-                .itemListStudents:active{
-                    transform: scale(.97);
-                }
-                .itemListStudents{
-                    padding: .5rem 1rem;
-                    background-color: rgba(255, 255, 255, .35);
-                    border-radius: 5px;
-                    transition: 350ms ease;
 
-                }
-                    .itemListStudents > p{
+    #openModalBtn {
+    background-color: #2c3e50; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 15px 30px; /* Espaciado interno */
+    border: none; /* Eliminar borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 18px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cursor al pasar por encima */
+    transition: background-color 0.3s ease; /* Transición suave */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    position: relative; /* Añadir posición relativa para el efecto */
+}
 
-                    }
+#openModalBtn span {
+    position: relative; /* Añadir posición relativa para los seudoelementos */
+    z-index: 1; /* Asegurar que las letras estén sobre el seudoelemento */
+}
+
+#openModalBtn::before {
+    content: attr(data-text); /* Usar el contenido del atributo data-text */
+    position: absolute; /* Posicionar el seudoelemento */
+    top: 0; /* Alinear en la parte superior */
+    left: 0; /* Alinear a la izquierda */
+    width: 100%; /* Ajustar al ancho del botón */
+    height: 100%; /* Ajustar al alto del botón */
+    overflow: hidden; /* Ocultar el desbordamiento */
+    color: #fff; /* Color de las letras */
+    z-index: 0; /* Asegurar que el seudoelemento esté detrás del texto */
+    animation: glitch 0.3s infinite alternate-reverse; /* Aplicar la animación de glitch */
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        transform: translate(-2px, -2px);
+    }
+    60% {
+        transform: translate(2px, 2px);
+    }
+    80% {
+        transform: translate(2px, -2px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+
+
+    </style>
 </style>
 
 <!-- Botón para abrir la ventana modal -->
@@ -673,6 +532,8 @@
     </div>
   </div>
 </div>
+
+
 <script>
     
     
