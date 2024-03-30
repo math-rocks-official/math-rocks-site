@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./Math Rocks - Files/mainResponsive.css">
+  <link rel="icon" href="https://mathrocks.net/wp-content/uploads/2020/05/cropped-logo-final-1-32x32.png">
   <title>Math Rocks Fest II Web</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,24 +15,30 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
+  background-image: url('./Math Rocks - Files/blockimg.jpg');
+  background-size: 1400px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   background-color: #f2f2f2;
 }
 
 .container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card {
   width: 100%;
-  max-width: 400px; /* Ajustar el ancho máximo para mantener la legibilidad en pantallas grandes */
+  max-width: 400px;
   text-align: center;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  background-color: #fff;
-  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 10px;
+  flex: 1;
 }
 
 .card-image {
@@ -52,34 +59,30 @@ body {
 }
 
 .card-link {
-display: block;
-text-decoration: none;
-color: #007bff;
-font-weight: bold;
-transition: color 0.3s ease;
+  display: block;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 .card-link:hover {
-color: #0056b3;
-}
-
-.spacer {
-width: 20px;
+  color: #0056b3;
 }
 
 @media only screen and (min-width: 600px) {
-.container {
-flex-direction: row;
-justify-content: center;
-}
+  .container {
+    flex-direction: row;
+    justify-content: center;
+  }
 
-.card {
-margin: 0 10px; /* Espacio entre las tarjetas en pantallas más grandes */
-}
+  .card {
+    margin: 10px;
+  }
 
-.spacer {
-display: none;
-}
+  .spacer {
+    display: none;
+  }
 }
 </style>
 
@@ -87,19 +90,28 @@ display: none;
   <div class="container">
     <div class="card">
       <img src="./Math Rocks - Files/computadora.png" alt="Imagen" class="card-image">
-      <p class="card-text">Sitio para PC's, tablets y laptops </p>
+      <p class="card-text">Sitio para PC's, tablets y laptops</p>
       <hr class="line-divider">
-      <a href="./index.html" target="_blank" class="card-link">Visitar sitio</a>
+      <a href="./firstindex.html" target="_blank" class="card-link">Visitar sitio</a>
     </div>
-    <div class="spacer"></div>
-    <div class="card smaller-card">
+    <div class="card">
       <img src="./Math Rocks - Files/celular.png" alt="Imagen" class="card-image">
       <p class="card-text">Sitio para dispositivos móviles</p>
       <hr class="line-divider">
-      <a href="./newindex.html" target="_blank" class="card-link">Vis
-itar sitio</a>
-</div>
-
+      <a href="./newindex.html" target="_blank" class="card-link">Visitar sitio</a>
+    </div>
+    <div class="card">
+      <img src="./Math Rocks - Files/cursoimg.png" alt="Imagen" class="card-image">
+      <p class="card-text">Cursos Math Rocks</p>
+      <hr class="line-divider">
+      <a href="./encuadres.html" target="_blank" class="card-link">Visitar sitio</a>
+    </div>
+    <div class="card">
+      <img src="./Math Rocks - Files/gal.png" alt="Imagen" class="card-image">
+      <p class="card-text">Galería Math Rocks FEST</p>
+      <hr class="line-divider">
+      <a href="./galery.html" target="_blank" class="card-link">Visitar sitio</a>
+    </div>
   </div>
 </body>
 </html>
